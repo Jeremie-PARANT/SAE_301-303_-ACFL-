@@ -10,6 +10,6 @@ Organisation (à lire, pour les developpeurs) :
 - Suivez les echéances du Trello, si vous ne pouvez pas effectuez le travail dans les temps, prévenez le groupe et le chef de projet dès que possible, pour que l'on s'organise (changer les dates / aider à effectuer le travail). N'effectuez pas le travail au dernier moment.
 
 Membre du groupe :
-Chef de projet : Jérémie PARANT
-Graphiste : Morgane LE NORMAND
-Developpeurs : Arno LE MOIL, Jérémie PARANT, Ruben DE ABREU
+- Chef de projet : Jérémie PARANT
+- Graphiste : Morgane LE NORMAND
+- Developpeurs : Arno LE MOIL, Jérémie PARANT, Ruben DE ABREU
