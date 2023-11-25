@@ -10,10 +10,8 @@ Organisation (à lire, pour les developpeurs) :
 - Suivez les echéances du Trello, si vous ne pouvez pas effectuez le travail dans les temps, prévenez le groupe et le chef de projet dès que possible, pour que l'on s'organise (changer les dates / aider à effectuer le travail).
 - Si il y a un doute sur une consigne, envoyer un message dans le groupe, j'essayerai dit répondre le plus rapidement possible
 - Ce mettre d'accord sur une nomenclature (façon d'écrire), pour une meiileur lisibilité et uniformité du site. Nous écrirons tous nos fonction/class css/variable en suivant la nomenclature suivante : le 1er mot commence par un minuscule, les mots suivant commencent par une majuscule pour bien les différentier, de plus les fonctions/class seront en anglais si possible (a par si vous avez vraiment du mal avec l'anglais).
-
-Exemple (nomenclature) : pour une bordure rouge, vous écrier "borderRed" (vous pouvez aussi mettre "redBorder", mais puisque le sujet principale est "border", je préfaire le mettre en 1er)
-
-Autre exemple (nomenclature) : un gros texte violet avec shadow vert : "txtBigPurShadowGr", vous pouvez utilisez des abréviation ("Gr" pour Green), a partir du moment ou vous suivez 2 règle, UN, que vous restez compréhensible (juste "S" pour shadow serai un peut court) DEUX : que vous soyer constant (si vous mettez "Gr" pour green, faite le partout, ne changez pas d'abréviation entre chaque class)
+  - Exemple (nomenclature) : pour une bordure rouge, vous écrier "borderRed" (vous pouvez aussi mettre "redBorder", mais puisque le sujet principale est "border", je préfaire le mettre en 1er)
+  - Autre exemple (nomenclature) : un gros texte violet avec shadow vert : "txtBigPurShadowGr", vous pouvez utilisez des abréviation ("Gr" pour Green), a partir du moment ou vous suivez 2 règle, UN, que vous restez compréhensible (juste "S" pour shadow serai un peut court) DEUX : que vous soyer constant (si vous mettez "Gr" pour green, faite le partout, ne changez pas d'abréviation entre chaque class)
 
 
 
