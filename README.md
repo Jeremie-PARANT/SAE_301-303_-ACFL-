@@ -7,8 +7,11 @@ Organisation (à lire, pour les developpeurs) :
 - Ce mettre d'accord sur la typographie (Titre et texte)
 - Vous effectuerez vos modifications sur votre branche. Concernant le CSS et le JavaScript, vous coderez dans des fichiers a vos noms, préalablement créés (exemple : arno.css, ruben.js), les css et javascript seront ensuite combinés en un seule fichier (Le Chef de projet (moi) s'en occupera)
 -Concernant les merges vers la branche main, le Chef de projet (moi) s'en occupera
-- Suivez les echéances du Trello, si vous ne pouvez pas effectuez le travail dans les temps, prévenez le groupe et le chef de projet dès que possible, pour que l'on s'organise (changer les dates / aider à effectuer le travail). N'effectuez pas le travail au dernier moment.
-
+- Suivez les echéances du Trello, si vous ne pouvez pas effectuez le travail dans les temps, prévenez le groupe et le chef de projet dès que possible, pour que l'on s'organise (changer les dates / aider à effectuer le travail).
+- Ce mettre d'accord sur une nomenclature (façon d'écrire), pour une meiileur lisibilité et uniformité du site. Nous écrirons tous nos fonction/class css/variable en suivant la nomenclature suivante : le 1er mot commence par un minuscule, les mots suivant commencent par une majuscule pour bien les différentier, de plus les fonction class seront en anglais si possible (a par si vous êtes vraiment pas a l'aise).
+Exemple : pour une bordure rouge, vous écrier "borderRed" (vous pouvez aussi mettre "redBorder", mais puisque le sujet principale est "border", je préfaire le mettre en 1er)
+Autre exemple : un gros texte violet avec shadow vert : "txtBigPurShadowGr", vous pouvez utilisez des abréviation ("Gr" pour Green), a partir du moment ou vous suivez 2 règle, UN, que vous restez compréhensible (juste "S" pour shadow serai un peut court) DEUX : que vous soyer constant (si vous mettez "Gr" pour green, faite le partout, ne changez pas d'abréviation entre chaque class)
+- Si il y a un doute sur une consigne, envoyer un message dans le groupe, j'essayerai dit répondre le plus rapidement possible
 Membre du groupe :
 - Chef de projet : Jérémie PARANT
 - Graphiste : Morgane LE NORMAND
