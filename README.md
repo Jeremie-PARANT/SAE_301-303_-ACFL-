@@ -5,8 +5,7 @@ Mise a jour et amélioration du site de ACFL, pour le rendre plus compétitif.
 
 Organisation (à lire, pour les developpeurs) :
 - Ce mettre d'accord sur la typographie (Titre et texte)
-- Vous effectuerez vos modifications sur votre branche. Concernant le CSS et le JavaScript, vous coderez dans des fichiers a vos noms, préalablement créés (exemple : arno.css, ruben.js), les css et javascript seront ensuite combinés en un seule fichier (Le Chef de projet (moi) s'en occupera)
--Concernant les merges vers la branche main, le Chef de projet (moi) s'en occupera
+- Vous effectuerez vos modifications sur la branche "developpement". Concernant le CSS et le JavaScript et le HTML, vous coderez dans des fichiers a vos noms, préalablement créés (exemple : arno.css, ruben.js, arno. html), les css, javascript et HTML seront ensuite combinés en un seule fichier, puis merge vers la branche main (Le Chef de projet (moi) s'en occupera)
 - Suivez les echéances du Trello, si vous ne pouvez pas effectuez le travail dans les temps, prévenez le groupe et le chef de projet dès que possible, pour que l'on s'organise (changer les dates / aider à effectuer le travail).
 - Si il y a un doute sur une consigne, envoyer un message dans le groupe, j'essayerai dit répondre le plus rapidement possible
 - Ce mettre d'accord sur une nomenclature (façon d'écrire), pour une meiileur lisibilité et uniformité du site. Nous écrirons tous nos fonction/class css/variable en suivant la nomenclature suivante : le 1er mot commence par un minuscule, les mots suivant commencent par une majuscule pour bien les différentier, de plus les fonctions/class seront en anglais si possible (a par si vous avez vraiment du mal avec l'anglais).
