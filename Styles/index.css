@@ -1,0 +1,37 @@
+/* Navbar */
+.navbarNav {
+    margin-bottom: 0;
+}
+
+.navCustom {
+    background-color: rgba(0, 48, 71, 1);
+}
+
+.navItem {
+    margin-right: 4% !important;
+}
+
+
+/* Typographie */
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4vw;
+    font-family: Jomhuria;
+}
+
+.text {
+    font-size: 1.2vw;
+    font-family: Jomolhari;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Jomhuria;
+    src: url(Ressources/Fonts/Jomhuria-Regular.ttf);
+}
+
+@font-face {
+    font-family: Jomolhari;
+    src: url(Ressources/Fonts/Jomolhari-Regular.ttf);
+}
