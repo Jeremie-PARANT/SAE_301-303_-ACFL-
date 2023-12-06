@@ -6,28 +6,24 @@
     <title>ACFL</title>
     <link href="Styles/arno.css" rel="stylesheet" type="text/css" media="all">
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <!-- Header -->
-	<header class="col-md-12">
-		<nav class="navbar navbar-expand-lg navbar-light navCustom" id="main-navbar">
-				<!-- Navbar Brand start -->
-				<a class="navbar-brand" href="#"><img src="images/logo.png" alt="" /></a>
-				<!-- Navbar Brand end -->
-				
-				<ul class="navbar-nav navbar-left navbarNav" id="main-menu">
-					<li class="nav-item navbar-brand navItem"><a class="navLink legend" href="#home">Accueil</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#activities">Activites</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#courses">Categories d'ULM</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#about-us">Moyens pedagogiques</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#events">Evenements</a></li>
-                    <li class="nav-item navbar-brand navItem"><a class="navLink" href="#teachers">Equipe</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#review">Review</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#gallery">Galerie</a></li>
-					<li class="nav-item navbar-brand navItem"><a class="navLink" href="#contact">Contact</a></li>
+	<header class="fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue" id="main-navbar">
+				<ul class="navbar-nav navbar-left mb-0" id="main-menu">
+					<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="#home">Accueil</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#activities">Activites</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#courses">Categories d'ULM</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#about-us">Moyens pedagogiques</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#events">Evenements</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink" href="#teachers">Equipe</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#review">Review</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#gallery">Galerie</a></li>
+					<li class="nav-item navbar-brand mr-4"><a class="navLink" href="#contact">Contact</a></li>
 				</ul>
 		</nav>	
 	</header>
@@ -40,14 +36,20 @@
 
 
     <!-- Activites -->
-    <section class="col-md-12 activite sectionBorder">
+    <section id="activities" class="pl-5 pt-5">
         <div class="d-flex">
             <div><h1 class="sectionTitle">Activité</h1>
                 <h2 class="sectionSubTitle">L’aéro-club assure la formation de pilotes et d’instructeurs. <br> Et propose également des baptêmes de l’air.</h2>
-                <p class="text activitesText">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie  dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac </p>
+                <p class="text pr-5">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie  dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac </p>
             </div>
-            <img class="roundImg" src="Ressources/Images/old/pendulaire.jpg" alt="pendulaire">
+            <img class="rounded-circle roundImg" src="Ressources/Images/old/pendulaire.jpg" alt="pendulaire">
         </div>
+        <div class="d-flex justify-content-around my-5">
+            <div class="YellowCircle"></div>
+            <div class="YellowCircle"></div>
+            <div class="YellowCircle"></div>
+        </div>
+
     </section>
 
 
@@ -60,8 +62,13 @@
 
 
     <!-- Moyens pédagogiques -->
-    <section>
-
+    <section id="about-us" class="py-5 backgroundBlue position-relative">
+        <div class="barYellow topMid"></div>
+        <h1 class="sectionTitle ml-5">Moyens pedagogiques</h1>
+        <p class="text ml-5">Un aérodrome privé avec la possibilité d'un hébergement dans un environnement exceptionnel</p>
+        <p class="text ml-4">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie  dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac </p>
+        <img class="w-100 my-4 hvw fitCover" src="Ressources/Images/old/b.jpg" alt="avions">
+        <div class="barYellow botMid"></div>
     </section>
 
 
@@ -95,15 +102,8 @@
 
 
     <!-- Contacte -->
-    <section>
+    <section id="contact">
 
     </section>
-
-
-    
-    <!-- Footer -->
-    <footer>
-
-    </footer>
 </body>
 </html>

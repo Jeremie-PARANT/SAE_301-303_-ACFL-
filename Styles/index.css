@@ -2,54 +2,67 @@ body {
     padding: 0 !important;
 }
 
+* {
+    font-family: Jomolhari;
+}
+
 /* Navbar */
-.navbarNav {
-    margin-bottom: 0;
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-size: 2.2vw;
+    line-height: 1;
+    font-family: Jomhuria;
 }
 
-.navCustom {
-    background-color: rgba(0, 48, 71, 1);
+.navLink:hover {
+    transition-duration: 100ms;
+    border-bottom: 0.2vw solid #ffffff;
+    color: white !important;
 }
-
-.navItem {
-    margin-right: 4% !important;
-}
-
-
-
-/* section */
-.sectionBorder {
-    padding-left: 5vw;
-}
-
-
 
 /* Activité */
 .roundImg {
-    border-radius: 100%;
     width: 24vw;
     height: 24vw;
     margin-top: 4vw;
     margin-right: 10vw;
 }
 
-.activitesText {
-    width: 90%;
+.YellowCircle {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    background-color: yellow;
+}
+
+
+/* Moyen pédagogique */
+.hvw {
+    height: 33vw;
+}
+
+.barYellow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 1vw;
+    border-radius: 10px;
+    background-color: yellow;
+}
+.topMid {
+    top: 0;
+}
+.botMid {
+    top: 100%;
 }
 
 
 /* Typographie */
-.navLink {
-    text-decoration: none;
-    color: white;
-    font-size: 2.2vw;
-    line-height: 0.7;
-    font-family: Jomhuria;
-}
 
 .text {
     font-size: 1.2vw;
-    font-family: Jomolhari;
 }
 
 .sectionTitle {
@@ -67,6 +80,21 @@ body {
     font-family: Jomhuria;
     line-height: 0.7;
     color: #6BBFF1;
+}
+
+/* Color */
+.backgroundDarkBlue {
+    background-color: rgba(0, 48, 71, 1);
+}
+
+.backgroundBlue {
+    background-color: #90CAF9;
+}
+
+/* Image */
+
+.fitCover {
+    object-fit: cover;
 }
 
 /* Fonts */
