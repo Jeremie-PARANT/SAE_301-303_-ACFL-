@@ -1,0 +1,13 @@
+/* Categorie ULM */
+
+.blueULM{
+  color: #003047;
+  font-family: 'Jomhuria';
+}
+
+/* Fonts */
+
+@font-face{
+  font-family: 'Jomhuria';
+  src: url( '../Ressources/Fonts/Jomhuria/Jomhuria-Regular.ttf');
+}
