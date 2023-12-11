@@ -18,17 +18,7 @@
         width: 100%;
     }
 }
-
-.container-fluid  {
-    padding: 0; /* Assurez-vous qu'aucun remplissage n'est appliqué au conteneur */
-    background-image: url(../Ressources/Images/New/image.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 95vh;
-
-}
-
+/*En cours d'essai*/
 @media only screen and (max-width: 767px) { 
     .container-fluid{
         /* The file size of this background image is 93% smaller to improve page load speed on mobile internet connections */ 
@@ -36,7 +26,23 @@
         max-width: 767px;
         background-size: 100%;
     } 
-    
-        
+}
 
-    }
+
+/*Titre au bas de l'image*/
+.text-justify{
+   padding-top: 85vh;
+}
+
+
+/*Image en arrière plan plus cover et détailles*/
+.container-fluid  {
+    padding: 0; /* Assurez-vous qu'aucun remplissage n'est appliqué au conteneur */
+    background-image: url(../Ressources/Images/New/image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+
+}
+
