@@ -1,15 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
-
-/*Responsive sur mobile*/
+/* Responsive sur mobile */
 @media screen and (max-width: 900px) {
     .carousel img {
         width: calc(100% / 2);
-
     }
 }
 
@@ -18,31 +16,61 @@
         width: 100%;
     }
 }
-/*En cours d'essai*/
-@media only screen and (max-width: 767px) { 
-    .container-fluid{
-        /* The file size of this background image is 93% smaller to improve page load speed on mobile internet connections */ 
-        background-image: url(../Ressources/Images/New/image.png); 
-        max-width: 767px;
-        background-size: 100%;
-    } 
+
+/* Titre au bas de l'image */
+.text-justify {
+    margin: auto;
+    padding-top: 80vh;
+    
+    font-size: 2em;
 }
 
-
-/*Titre au bas de l'image*/
-.text-justify{
-   padding-top: 85vh;
-}
-
-
-/*Image en arrière plan plus cover et détailles*/
-.container-fluid  {
-    padding: 0; /* Assurez-vous qu'aucun remplissage n'est appliqué au conteneur */
+/* Image en arrière-plan plus cover et détails */
+.container-fluid {
+    padding: 0;
     background-image: url(../Ressources/Images/New/image.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 85vh;
-
+    display: flex;
+    align-items: center; /* Ajout de l'alignement vertical au centre */
 }
 
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+
+
+.arrow {
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+  }
+  
+  .arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #full {
+    height: 100vh;
+    background-color: #256347;
+  }
+  
+  
