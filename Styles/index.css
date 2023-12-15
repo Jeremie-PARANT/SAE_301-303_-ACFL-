@@ -6,6 +6,8 @@ body {
     font-family: Jomolhari;
 }
 
+
+
 /* Navbar */
 .navLink {
     text-decoration: none;
@@ -21,20 +23,24 @@ body {
     color: white !important;
 }
 
+
+
 /* Activité */
 .roundImg {
-    width: 24vw;
-    height: 24vw;
+    width: 15vw;
+    height: 15vw;
     margin-top: 4vw;
     margin-right: 10vw;
 }
 
-.YellowCircle {
+.ActiviteImage {
     width: 10vw;
     height: 10vw;
     border-radius: 100%;
-    background-color: yellow;
+    background-color: #F6CB43;
+    margin: auto;
 }
+
 
 
 /* Moyen pédagogique */
@@ -49,7 +55,7 @@ body {
     width: 30%;
     height: 1vw;
     border-radius: 10px;
-    background-color: yellow;
+    background-color: #F6CB43;
 }
 .topMid {
     top: 0;
@@ -59,8 +65,93 @@ body {
 }
 
 
-/* Typographie */
 
+/* Equipe */
+.instructeur {
+    width: 19%;
+    height: 50vh;
+    background-color: white;
+    margin: 0 2vw 0 2vw;
+    position: relative;
+    border-radius: 1.2vw;
+}
+
+.equipeImg {
+    display: block;
+    margin: auto;
+    height: 14.5vw;
+}
+
+.banner {
+    width: fit-content;
+    padding: 0.3vw 0.3vw 0.3vw 2vw;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 2.5vw solid #90CAF9;
+    border-right: 2vw solid transparent;
+}
+
+.barBig {
+    width: 60% !important;
+}
+
+/* Contacte + Footer */
+.logoI {
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    margin: 0 1vw 0 1vw;
+}
+
+input, textarea {
+    border-radius: 2vw;
+    border: 0.15vw solid white;
+    background-color: #003047;
+    color: white;
+    width: 45%;
+    padding: 0 1vw 0 1vw;
+}
+
+input[type="submit"] {
+    color: #003047 !important;
+    background-color: white !important;
+    font-family: Jomhuria !important;
+    font-size: 3vw !important;
+    line-height: 2.8vw;
+    padding: 0 !important;
+    width: 30% !important;
+    padding: 0.2vw 1vw 0 1vw !important;
+}
+
+.doubleInput {
+    width: 95%;
+}
+
+::placeholder {
+    font-family: Jomhuria !important;
+    font-size: 2.5vw !important;
+    margin-left: 1vw !important;
+    padding-left: 1vw !important;
+}
+
+.inputMarginL {
+    margin-left: 5%;
+}
+
+.inputMarginR {
+    margin-right: 5%;
+}
+
+/* Footer */
+.footerImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Typographie */
 .text {
     font-size: 1.2vw;
 }
@@ -70,9 +161,8 @@ body {
     font-family: Jomhuria;
     line-height: 0.8;
     color: #003047;
-    border-bottom: 0.3vw solid #003047;
+    border-bottom: 0.25vw solid #003047;
     width: fit-content;
-    margin-bottom: 2vw;
 }
 
 .sectionSubTitle {
@@ -82,17 +172,37 @@ body {
     color: #6BBFF1;
 }
 
+.subTitle {
+    font-size: 2.5vw;
+    font-family: Jomhuria;
+    line-height: 0.7;
+    color: #6BBFF1;
+}
+
+.contactTitle {
+    font-size: 3.5vw;
+    font-family: Jomhuria;
+    line-height: 0.7;
+}
+
+
+
 /* Color */
 .backgroundDarkBlue {
-    background-color: rgba(0, 48, 71, 1);
+    background-color: rgba(0, 48, 71, 1) !important;
 }
 
 .backgroundBlue {
     background-color: #90CAF9;
 }
 
-/* Image */
+.textWhite {
+    color: white !important;
+}
 
+
+
+/* Image */
 .fitCover {
     object-fit: cover;
 }
@@ -112,6 +222,7 @@ body {
 
 
 /* TEMP */
-#accueil {
+#accueil, #events {
     height: 300px;
 }
+
