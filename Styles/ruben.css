@@ -1,85 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@300;500&display=swap');
-
 * {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    min-height: 100dvh;
-    padding: 0 35px;
-}
-
-.wrapper {
-    /* position: relative; */
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/*Fleches gauche et droite*/
-.arrows i {
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.3rem;
-    line-height: 46px;
-    border-radius: 50%;
-    color: #fff;
-    background: black;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5), inset 0px 4px 4px rgba(255,255,255,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.1s ease-in-out;
-}
-/*Transfo flèches*/
-.arrows i:active {
-  transform: scale(1.03);
-}
-
-.arrows {
-    /* position: absolute; */
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.wrapper .carousel {
-    white-space: nowrap;
-    font-size: 0;
-    overflow: hidden;
-    cursor: pointer;
-    scroll-behavior: smooth;
-}
-/*pouvoir grab les photos*/
-.carousel.dragging {
-    cursor: grab;
-    scroll-behavior: auto;
-}
-
-.carousel.dragging img {
-    pointer-events: none;
-}
-/*Combien d'images seront affichés*/
-.carousel img {
-    height: 340px;
-    width: calc(100% / 1);
-    object-fit: cover;
-    margin-left: 14px;
-}
-
-.carousel img:first-child {
-    margin-left: 0;
-}
-/*Responsive sur mobile*/
+/* Responsive sur mobile */
 @media screen and (max-width: 900px) {
     .carousel img {
         width: calc(100% / 2);
@@ -91,3 +16,53 @@ body {
         width: 100%;
     }
 }
+
+/* Titre au bas de l'image */
+.text-justify {
+    margin: auto;
+    padding-top: 80vh;
+    
+    font-size: 2em;
+}
+
+/* Image en arrière-plan plus cover et détails */
+.container-fluid {
+    padding: 0;
+    background-image: url(../Ressources/Images/New/image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+    display: flex;
+    align-items: center; /* Ajout de l'alignement vertical au centre */
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.no-underline:hover {
+    text-decoration: none;
+    color: #5279A2;
+  }
+
+.no-underline{
+    color: #003047;
+}
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #full {
+    height: 100vh;
+    background-color: #256347;
+  }
+  
+  
