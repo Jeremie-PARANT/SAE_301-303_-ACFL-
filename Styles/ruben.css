@@ -44,24 +44,16 @@
     margin-top: 2vh;
 }
 
+.no-underline:hover {
+    text-decoration: none;
+    color: #5279A2;
+  }
+
+.no-underline{
+    color: #003047;
+}
 
 
-.arrow {
-    box-sizing: border-box;
-    height: 5vw;
-    width: 5vw;
-    border-style: solid;
-    border-color: black;
-    border-width: 0px 1px 1px 0px;
-    transform: rotate(45deg);
-    transition: border-width 150ms ease-in-out;
-  }
-  
-  .arrow:hover {
-    border-bottom-width: 4px;
-    border-right-width: 4px;
-  }
-  
   .container {
     display: flex;
     align-items: center;
