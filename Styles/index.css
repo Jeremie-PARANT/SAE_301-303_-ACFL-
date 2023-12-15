@@ -104,6 +104,11 @@ body {
     height: 4.5vw;
     border-radius: 50%;
     margin: 0 1vw 0 1vw;
+    transition-duration: 300ms;
+}
+
+.logoI:hover {
+    scale: 1.2;
 }
 
 input, textarea {
@@ -124,6 +129,11 @@ input[type="submit"] {
     padding: 0 !important;
     width: 30% !important;
     padding: 0.2vw 1vw 0 1vw !important;
+    transition-duration: 300ms;
+}
+
+input[type="submit"]:hover {
+    scale: 1.1;
 }
 
 .doubleInput {
