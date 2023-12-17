@@ -6,20 +6,20 @@
 }
 
 .ulmCard{
-  width: 280px;
+  width: 20vw;
 }
 
 .cardBottom{
-  height: 240px;
+  width: 20vw;
   position: relative;
   background-color: #003047;
   color: white;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
 }
 
 .cardBottomTitle{
-  width: 170px;
+  width: fit-content;
   background-color: white;
   color: #003047;
   clip-path: polygon(0 0, 85% 0, 100% 99%, 0% 100%);
@@ -28,13 +28,31 @@
 .spaceBetween{
   display: flex;
   justify-content: space-between;
-  vertical-align: middle;
+  align-items: center;
 }
 
+
 #ulmCardPhoto{
-  width: 280px;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  width: 20vw;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+}
+
+.buttonCustom{
+  transition: 300ms !important;
+  font-family: 'Jomhuria';
+  font-size: 1.8em !important;
+  line-height: 1 !important;
+  border-radius: 2em !important;
+}
+
+.buttonCustom:hover{
+  scale: 1.1;
+}
+
+.prixCustom{
+  font-family: 'Jomhuria';
+  font-size: 1.6em !important;
 }
 
 /* Fonts */
