@@ -1,12 +1,40 @@
 /* Categorie ULM */
 
-#text{
-  font-size: 20px;
+.textSmall{
+  font-size: 0.8em !important;
+  text-align: justify !important;
 }
 
-.blueULM{
+.ulmCard{
+  width: 280px;
+}
+
+.cardBottom{
+  height: 240px;
+  position: relative;
+  background-color: #003047;
+  color: white;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.cardBottomTitle{
+  width: 170px;
+  background-color: white;
   color: #003047;
-  font-family: 'Jomhuria';
+  clip-path: polygon(0 0, 85% 0, 100% 99%, 0% 100%);
+}
+
+.spaceBetween{
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+#ulmCardPhoto{
+  width: 280px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 /* Fonts */
