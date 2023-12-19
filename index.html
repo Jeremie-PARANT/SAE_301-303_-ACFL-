@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACFL</title>
     <link href="Styles/arno.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="Styles/ruben.css">
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -28,9 +29,30 @@
 
 
     <!-- Accueil -->
-    <section id="accueil">
-    </section>
+    <section id="home">
+        <container id="car1 position-relative">
+            <!--
 
+            -->
+            <video id="animationVideo" loop muted playsinline class="animationVideo animationVideo1">
+                <source src="Ressources/Animation/Composition_1_1.mp4" type="video/mp4">
+            </video>
+            <div class="position-absolute planeButton planeButton1" onclick="startAnimation('animationVideo')">FLY !!!</div>
+
+            <div class="container-fluid p-0">
+                <p class="text-justify text-center">Bienvenu(e) dans notre association <br> Aéro-club de Frotey-Les-Lures </p>
+            </div>
+            <div class="container">
+                <a data-scroll href="">
+                  <div class="container mt-5">
+                    <a href="#car2" class="no-underline"><!--Remplacer/mettre la destination-->
+                      <i class="fas fa-chevron-down fa-3x text-center d-block mx-auto"></i>
+                    </a>
+                  </div>
+                </a>
+              </div>
+            </container>
+    </section>
 
 
     <!-- Activites -->
@@ -45,7 +67,7 @@
         </div>
         <h3 class="text-center mt-5 mb-4 subTitleBig">l’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</h3>
         <div>
-            <div class="d-flex justify-content-around mb-2 mx-5">
+            <div class="d-flex justify-content-around mb-4 mx-5">
                 <div class="text-center prestComp">
                     <img src="Ressources/Images/actiMaintenance.png" class="ActiviteImage"></img>
                     <h3 class="subTitle mt-3">Maintenance des ULM Moteur</h3>
@@ -61,7 +83,7 @@
                 <div class="text-center prestComp">
                     <img src="Ressources/Images/actiRestau.png" class="ActiviteImage"></img>
                     <h3 class="subTitle mt-3">Service de restauration rapide</h3>
-                    <div class="mb-5">Nous proposons bien sûr un service de restauration rapide.</div>
+                    <div class="mb-5">Nous proposons bien sûr un service de restauration rapide, pour vous servir des plats chauds durant votre séjour.</div>
                     <br><div class="learnMore">Learn More</div>
                 </div>
             </div>
@@ -187,6 +209,7 @@
                     <img class="logoI fitCover" src="Ressources/Images/instagramWhite.png" alt="">
                 </div>
             </div>
+
             <div class="col-7 text-center textWhite pr-5">
                 <h3 class="contactTitle m-0">Contacter nous !</h3>
                 <div>Laissez votre message, nous vous contacterons dans la semaine</div>
@@ -205,8 +228,25 @@
 
     
     <!-- Footer -->
-    <footer class="backgroundDarkBlue pt-4">
+    <footer class="backgroundDarkBlue pt-4  position-relative">
+
+        <video id="animationVideo2" loop muted playsinline class="animationVideo animationVideo2">
+            <source src="Ressources/Animation/avion_1.mp4" type="video/mp4">
+        </video>
+        <div class="position-absolute planeButton planeButton1" onclick="startAnimation('animationVideo2')">FLY !!!</div>
+
         <img class="footerImg" src="Ressources/Images/footerImg.png" alt="montagne, blanc, dessin">
+        <img class="footerImgFirst" src="Ressources/Images/FooterImgStart.png" alt="montagne, blanc, dessin">
     </footer>
+
+
+    <script src="Script/index.js"></script>
+    <script src="Script/ruben.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Ajoutez la bibliothèque Font Awesome pour obtenir l'icône de la flèche -->
+    <script src="https://kit.fontawesome.com/7c9c22d174.js" crossorigin="anonymous"></script>
 </body>
 </html>

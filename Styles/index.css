@@ -5,6 +5,7 @@ body {
 * {
     font-family: Jomolhari;
     font-size: 1.2vw;
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -19,6 +20,37 @@ body {
     transition-duration: 100ms;
     border-bottom: 0.2vw solid #ffffff;
     color: white !important;
+}
+
+/* Accueil */
+#accueil {
+    height: fit-content;
+}
+
+.animationVideo {
+    position: absolute;
+    object-fit: cover;
+}
+
+.animationVideo1 {
+    width: 100%;
+    top: 22%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.animationVideo2 {
+    width: 60%;
+    bottom: 0 !important;
+}
+
+.planeButton {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    color: red;
 }
 
 /* Activité */
@@ -171,6 +203,14 @@ input[type="submit"]:hover {
     object-fit: cover;
 }
 
+.footerImgFirst {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    object-fit: cover;
+}
+
 /* Typographie */
 h1, h2, h3, h4, h5, h6 {
     font-family: Jomhuria !important;
@@ -202,6 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .subTitleBig {
     font-size: 3vw;
+    color: #003047 !important;
 }
 
 
