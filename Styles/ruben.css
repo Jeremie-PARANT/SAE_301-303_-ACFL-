@@ -98,3 +98,7 @@ button:hover {
 #cookie-banner{
     background-color: #003047;
 }
+
+.visibility{
+    visibility: hidden;
+}
