@@ -1,104 +1,118 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 /* Responsive sur mobile */
 @media screen and (max-width: 900px) {
-    .carousel img {
-        width: calc(100% / 2);
-    }
+.carousel img {
+    width: calc(100% / 2);
 }
-
+}
 @media screen and (max-width: 550px) {
-    .carousel img {
-        width: 100%;
-    }
+.carousel img {
+    width: 100%;
 }
-
+}
 /* Titre au bas de l'image */
 .text-justify {
-    margin: auto;
-    padding-top: 80vh;
-    
-    font-size: 2em;
+margin: auto;
+padding-top: 80vh;
 }
-
 /* Image en arrière-plan plus cover et détails */
 .container-fluid {
-    padding: 0;
-    background-image: url(../Ressources/Images/New/image.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 85vh;
-    display: flex;
-    align-items: center; /* Ajout de l'alignement vertical au centre */
+padding: 0;
+background-image: url(../Ressources/Images/New/image.png);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+align-items: center; /* Ajout de l'alignement vertical au centre */
 }
-
-.container {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin-top: 2vh;
-}
-
 .no-underline:hover {
-    text-decoration: none;
-    color: #5279A2;
-  }
+text-decoration: none;
+color: #5279A2;
+}
 
 .no-underline{
-    color: #003047;
+color: #003047;
 }
-
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #full {
-    height: 100vh;
-    background-color: #256347;
-  }
-  
-  .cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    z-index: 40;
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+} 
+#full {
+height: 100vh;
+background-color: #256347;
 }
-
-.buttons {
-    margin-top: 10px;
+.cookie-banner {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #333;
+color: #fff;
+text-align: center;
+z-index: 40;
 }
-
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
+background-color: #4CAF50;
+color: white;
 }
-
 button:hover {
-    background-color: #45a049;
+background-color: #45a049;
 }
-
 #cookie-banner{
-    background-color: #003047;
+background-color: #003047;
 }
-
 .visibility{
-    visibility: hidden;
+visibility: hidden;
+}
+.banner {
+background-color: #003047;
+color: white;
+width: 50vw !important;
+align-content: center;
+}
+.banner h1 {
+color: #003047;
+}
+.carousel-control-prev{
+position: absolute !important;
+top: 50% !important;
+transform: translateY(-50%);
+left: -16vh !important;
+display: block !important;
+background-color: black;
+}
+.carousel-control-prev-icon{
+background-image: url(../Ressources/Images/New/symbole-fleche-gauche-noir.png) !important;
+height: 5vw !important;
+width: 5vw !important; 
+}
+.carousel-control-next{
+position: absolute !important;
+top: 50% !important;
+transform: translateY(-50%);
+right: -16vh !important;
+display: block !important;
+background-color: black;
+}
+.carousel-control-next-icon{
+background-image: url(../Ressources/Images/New/symbole-fleche-gauche-noir.png) !important;
+transform: rotate(180deg);
+height: 5vw !important;
+width: 5vw !important; 
+}
+.path{
+clip-path: polygon(0 0, 85% 0, 100% 99%, 0% 100%);
+background-color: white;
+width: 20vw;
+}
+.path2{
+clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+background-color: white;
+width: 10vw;
 }
