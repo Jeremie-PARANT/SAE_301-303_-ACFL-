@@ -9,7 +9,7 @@ class adherent {
     public String $email;
 
     // déclaration des méthodes
-    public function adherent(String $name, String $surname, String $email) {
+    public function __construct(String $name, String $surname, String $email) {
         $this->name = $name;
         $this->surname = $surname;
         $this->email = $email;

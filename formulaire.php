@@ -30,12 +30,11 @@
     // Envoie vers BDD
 
 
-    if (!empty($_POST['name'])) {
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $email = $_POST['email'];
+    if (!empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email'])) {
 
-        $query = $database->prepare("INSERT INTO plld_adherent(name, surname, mail) VALUES ('$name', '$surname', '$email')");
+        $newAdherent = new App\Database\adherent($name, $surname, $email);
+
+        $query = $database->prepare("INSERT INTO plld_adherent(name, surname, mail) VALUES ('$newAdherent->name', '$newAdherent->surname', '$newAdherent->email')");
         $query->execute();
     }
     ?>
