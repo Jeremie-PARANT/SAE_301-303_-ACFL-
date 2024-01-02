@@ -1,0 +1,16 @@
+body {
+    background-color: #003047 !important;
+}
+
+.inscriptionAdherant {
+    margin: auto;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: auto !important;
+}
+
+.erreur {
+    color: red;
+}
