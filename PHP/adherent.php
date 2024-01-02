@@ -8,12 +8,12 @@ class adherent {
     public String $surname;
     public String $mail;
     public ?int $age;
-    public ?int $phone;
+    public ?String $phone;
     public String $activity;
     public String $other;
 
     // Les constructeur
-    public function __construct(String $name, String $surname, String $mail, ?int $age, ?int $phone, String $activity, String $other) {
+    public function __construct(String $name, String $surname, String $mail, ?int $age, ?String $phone, String $activity, String $other) {
         $this->name = $name;
         $this->surname = $surname;
         $this->mail = $mail;
@@ -104,13 +104,14 @@ class adherent {
 
     public static function phoneError($phone) {
         // récupérer la longueur du numéro de téléphone
-        $phoneString = strval($phone);
-        $phoneLenght = strlen($phoneString);
-        if (!is_numeric($phone)){
-            return "<div class='erreur'> Le numéro de téléphone doit être un nombre. </div><br>";
+        if (!is_string($phone)){
+            return "<div class='erreur'> Le numéro de téléphone doit être une chaine de charactère. </div><br>";
         }
-        elseif ($phoneLenght != 10){
+        elseif (strlen($phone) != 10){
             return "<div class='erreur'> Le numéro de téléphone doit contenir 10 chiffre (attention au espace) </div><br>";
+        }
+        elseif (!preg_match('/^[0-9]+$/', $phone)){
+            return "<div class='erreur'> Le numéro de téléphone uniquement contenir des chiffre </div><br>";
         }
         else{
             return false;
