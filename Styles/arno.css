@@ -31,7 +31,6 @@
   align-items: center;
 }
 
-
 #ulmCardPhoto{
   width: 20vw;
   border-top-right-radius: 1em;
@@ -55,9 +54,143 @@
   font-size: 1.6em !important;
 }
 
+/* Galerie */
+
+.g16-9 {
+  width: 320px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  object-fit: cover;
+}
+
+.g50-9 {
+  width: 1000px;
+  height: 220px;
+  object-fit: cover;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.gImg {
+  cursor: pointer;
+  transition-duration: 300ms;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.gImg:hover {
+  scale: 1.1;
+}
+
+/* Gallery zoom */
+#bigGallery {
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.bigGallery16-9 {
+    width: 700px;
+    height: auto;
+}
+
+.bigGallery50-9 {
+    width: 1400px;
+    height: auto !important;
+}
+
+#galleryContent {
+    position: relative;
+}
+
+#bigGalleryImg {
+    width: 100%;
+    height: 100%;
+    border: 8px solid #1F1D19;
+    border-radius:10px;
+}
+
+#galleryCroix {
+    position: fixed !important;
+    float: none;
+    top: 3% !important;
+    right: 3% !important;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#backgroundCover {
+    position: fixed;
+    visibility: hidden;
+    z-index: 10;
+    background-color: rgba(20, 20, 20, 0.7);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+  overflow: hidden;
+} 
+
+/* Position */
+
+.fVerticalCenter {
+  align-items: center;
+}
+
+.fSpaceBetween {
+  justify-content: space-between;
+}
+
+.appear {
+  visibility: visible !important;
+  opacity: 100% !important;
+  transition: 700ms linear;
+}
+
+.appearInstant {
+  visibility: visible !important;
+  opacity: 100% !important;
+}
+
+.croix{
+  position: sticky;
+  padding: 10px 10px 0 0;
+  top: 0;
+  display: -webkit-box;
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0ms !important;
+}
+
+.icroix{
+  width: 20px;
+}
+
+.croix:hover {
+  scale: 1.1;
+}
+
+/* texte */
+.footerTxtSize {
+  font-size: 11px;
+  line-height: 14px;
+}
+
 /* Fonts */
 
 @font-face{
   font-family: 'Jomhuria';
   src: url( '../Ressources/Fonts/Jomhuria/Jomhuria-Regular.ttf');
 }
+

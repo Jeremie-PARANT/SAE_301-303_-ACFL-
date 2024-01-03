@@ -127,7 +127,7 @@ body {
 }
 
 .banner {
-    width: fit-content;
+    width: fit-content !important;
     padding: 0.3vw 0.3vw 0.3vw 2vw;
 }
 
