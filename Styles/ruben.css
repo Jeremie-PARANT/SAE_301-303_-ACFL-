@@ -114,5 +114,6 @@ width: 20vw;
 .path2{
 clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
 background-color: white;
+color: black;
 width: 10vw;
 }
