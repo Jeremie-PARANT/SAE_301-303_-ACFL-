@@ -32,14 +32,14 @@ require_once 'PHP/adherent.php';
                 $_SESSION['currentAdherent'] = $num;
                 header("Location: reservation.php");
             } else {
-                // Les identifiants saisis n'existent pas
+                // Les identifiants saisis n'existent pas, renvoie erreur
                 $error = "<div class='erreur'> Identifiant incorrectes </div>";
             }
         }
     ?>
 
 
-
+    <!-- Formulaire, avec affichage des erreurs -->
     <form action="connexion.php" method="post">
         <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
         <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
