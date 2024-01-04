@@ -19,8 +19,10 @@ require_once 'PHP/fonction.php';
     'td' 'tr' 'th' et 'table' 
     Ah oui, et aussi, met une animation sur les th (genre scale 1.1 en hover), car il permet de lancer une fonction -->
     <style>
-        td {
+        * {
             text-align: center;
+        }
+        td {
             padding : 5px 15px;
         }
         table {
@@ -31,6 +33,9 @@ require_once 'PHP/fonction.php';
             scale: 1.1;
             cursor: pointer;
         }
+        input {
+            margin: 0 0 10px 0;
+        }
     </style>
 
     <?php
@@ -38,15 +43,31 @@ require_once 'PHP/fonction.php';
         $queryReserv = $database->prepare('SELECT plld_reservation.*, plld_adherent.name AS adherent_name, plld_adherent.surname AS adherent_surname FROM plld_reservation INNER JOIN plld_adherent ON plld_reservation.num_adherent = plld_adherent.num;');
         $queryReserv->execute();
         $reservations = $queryReserv->fetchAll();
+
+        $queryAdherent = $database->prepare('SELECT * FROM plld_adherent;');
+        $queryAdherent->execute();
+        $adherents = $queryAdherent->fetchAll();
         
 
         // Affiche le tableau des réservations
-        echo "<input type='text' id='reservationSearch' onkeyup=\"search('reservationSearch', 'reservationTable')\" placeholder='recherche'>
+        echo "<h1>Réservation</h1>
+        <input type='text' id='reservationSearch' onkeyup=\"search('reservationSearch', 'reservationTable')\" placeholder='recherche'>
         <table id='reservationTable'>
         <th onclick=\"sortTable(0, 'reservationTable')\">Adhérent</th><th onclick=\"sortTable(1, 'reservationTable')\">Date début</th><th onclick=\"sortTable(2, 'reservationTable')\">Date Fin</th><th onclick=\"sortTable(3, 'reservationTable')\">Status</th><th onclick=\"sortTable(4, 'reservationTable')\">Numéro de réservation</th>";
         foreach ($reservations as $reservation)
         {
             echo "<tr><td> {$reservation['adherent_name']} {$reservation['adherent_surname']} </td><td> {$reservation['date_debut']} </td><td> {$reservation['date_fin']} </td><td> {$reservation['status']} </td><td> {$reservation['num']} </td></tr>";
+        }
+        echo '</table>';
+
+        // Affiche le tableau des adhérents
+        echo "<h1>Adherent</h1>
+        <input type='text' id='adherentSearch' onkeyup=\"search('adherentSearch', 'adherentTable')\" placeholder='recherche'>
+        <table id='adherentTable'>
+        <th onclick=\"sortTable(0, 'adherentTable')\">Nom</th><th onclick=\"sortTable(1, 'adherentTable')\">Mail</th><th onclick=\"sortTable(2, 'adherentTable')\">Activité</th><th onclick=\"sortTable(3, 'adherentTable')\">Age</th><th onclick=\"sortTable(4, 'adherentTable')\">Numéro de téléphone</th><th onclick=\"sortTable(4, 'adherentTable')\">Numéro d'identification</th>";
+        foreach ($adherents as $adherent)
+        {
+            echo "<tr><td> {$adherent['name']} {$adherent['surname']} </td><td> {$adherent['mail']} </td><td> {$adherent['activity']} </td><td> {$adherent['age']} </td><td> {$adherent['phone']} </td><td> {$adherent['num']} </td></tr>";
         }
         echo '</table>';
     ?>
