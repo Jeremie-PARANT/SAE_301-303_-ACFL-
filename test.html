@@ -1,85 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France air Expo 2023</title>
+    <style>
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
 
-    .carousel-container {
-      overflow: hidden;
-      white-space: nowrap;
-    }
+        .column {
+            box-sizing: border-box;
+            width: 33.33%;
+            float: left;
+            padding: 10px;
+            height: 300px;
+            text-align: center; /* Ajout de cette propriété pour centrer le contenu dans chaque colonne */
+        }
 
-    .carousel-item {
-      display: inline-block;
-      width: 400px; /* Ajustez la largeur des images selon vos besoins */
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  </style>
+        .row img {
+            display: block;
+            margin: 0 auto; /* Ajustez la marge pour centrer l'image horizontalement */
+            max-width: 100%;
+            max-height: 250px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="carousel-container" id="myCarousel">
-  <div class="carousel-item">
-    <img src="Ressources/Images/old/slide-1.jpg" alt="Image 1">
-  </div>
-  <div class="carousel-item">
-    <img src="Ressources/Images/old/slide-2.jpg" alt="Image 2">
-  </div>
-  <div class="carousel-item">
-    <img src="Ressources/Images/old/slide-3.jpg" alt="Image 3">
-  </div>
-</div>
-
-<script>
-  let currentIndex = 0;
-  const items = document.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-
-  function showItem(index) {
-    items.forEach((item, i) => {
-      item.style.transform = `translateX(${(i - index) * 100}%)`;
-    });
-  }
-
-  function nextItem() {
-    currentIndex = (currentIndex + 1) % totalItems;
-    showItem(currentIndex);
-  }
-
-  function prevItem() {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    showItem(currentIndex);
-  }
-
-  document.getElementById('myCarousel').addEventListener('transitionend', () => {
-    items.forEach((item, i) => {
-      if (i !== currentIndex) {
-        item.style.transition = 'none';
-        item.style.transform = `translateX(${(i - currentIndex) * 100}%)`;
-        item.offsetHeight; // Trigger reflow
-        item.style.transition = '';
-      }
-    });
-  });
-
-  showItem(currentIndex);
-
-  // Uncomment the line below if you want automatic sliding
-  // setInterval(nextItem, 3000);
-</script>
-
+    <div class="row">
+        <div class="column">
+            <img src="Ressources/gallery/event-1.png" alt="Expo 2023">
+        </div>
+        <div class="column">
+            <h2>France air expo 2023</h2>
+            <p>9:00 AM to 18:00 PM</p>
+            <p>Saint Martin de Castillon</p>
+        </div>
+        <div class="column">
+            <p>13 nov</p>
+        </div>
+    </div>
 </body>
 </html>
