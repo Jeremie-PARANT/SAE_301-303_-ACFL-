@@ -20,6 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+    <div class="aucentre">
     <?php
         if (!empty($currentAdherent)) {
             // Get les information de l'utlisateur actuel
@@ -39,5 +40,7 @@
             }
         }
     ?>
+    <button class="bouton43"><a href="reservation.php">Reservation ?</a></button>
+    </div>
 </body>
 </html>
