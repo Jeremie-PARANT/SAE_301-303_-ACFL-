@@ -1,5 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: #003047 !important;
+    color: white !important;
 }
 
 .inscriptionAdherant {
@@ -13,4 +19,25 @@ input[type="checkbox"] {
 
 .erreur {
     color: red;
+}
+
+.bouton43{
+    background-color: white !important;
+    border: 2px solid black !important;
+    border-radius: 8% 8% 8% 8%;
+    margin-top: 2vw;
+}
+
+.bouton43 a{
+    text-decoration: none !important;
+    color: #003047 !important;
+    padding: 5px;
+}
+.aucentre{
+    margin: 5vw auto 0 auto;
+    text-align: center;
+    padding: 5vw;
+    background-color: #5279A2;
+    width: 800px;
+    box-shadow: 5px 5px 10px 10px #5279A2;
 }

@@ -16,6 +16,14 @@ font-size: 2.2vw;
 line-height: 1;
 font-family: Jomhuria;
 }
+.navLink2 {
+    text-decoration: none;
+    color: white;
+    font-size: 2.2vw;
+    line-height: 1;
+color: #6BBFF1;
+    font-family: Jomhuria;
+    }
 .navLink:hover {
 transition-duration: 100ms;
 border-bottom: 0.2vw solid #ffffff;
