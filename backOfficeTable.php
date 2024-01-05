@@ -10,7 +10,7 @@ require_once 'PHP/fonction.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tableaux des informations essentiels</title>
 </head>
 <body>
     <!-- Style temporaire -->
@@ -61,10 +61,10 @@ require_once 'PHP/fonction.php';
         echo "<h1>Réservation</h1>
         <input type='text' id='reservationSearch' onkeyup=\"search('reservationSearch', 'reservationTable')\" placeholder='recherche'>
         <table id='reservationTable'>
-        <th onclick=\"sortTable(0, 'reservationTable')\">Adhérent</th><th onclick=\"sortTable(1, 'reservationTable')\">Date début</th><th onclick=\"sortTable(2, 'reservationTable')\">Date Fin</th><th onclick=\"sortTable(3, 'reservationTable')\">Status</th><th onclick=\"sortTable(4, 'reservationTable')\">Numéro de réservation</th>";
+        <th onclick=\"sortTable(0, 'reservationTable')\">Adhérent</th><th onclick=\"sortTable(1, 'reservationTable')\">Date début</th><th onclick=\"sortTable(2, 'reservationTable')\">Date Fin</th><th onclick=\"sortTable(3, 'reservationTable')\">Status</th><th onclick=\"sortTable(4, 'reservationTable')\">Numéro de réservation</th><th onclick=\"sortTable(5, 'reservationTable')\">Détails</th>";
         foreach ($reservations as $reservation)
         {
-            echo "<tr><td> {$reservation['adherent_name']} {$reservation['adherent_surname']} </td><td> {$reservation['date_debut']} </td><td> {$reservation['date_fin']} </td><td> {$reservation['status']} </td><td> {$reservation['num']} </td></tr>";
+            echo "<tr><td> {$reservation['adherent_name']} {$reservation['adherent_surname']} </td><td> {$reservation['date_debut']} </td><td> {$reservation['date_fin']} </td><td> {$reservation['status']} </td><td> {$reservation['num']} </td><td><a href=\"details.php?num={$reservation['num']}\"><div class=\"details\">Link</div></a></td></tr>";
         }
         echo '</table>';
 
