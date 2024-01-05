@@ -47,6 +47,14 @@ require_once 'PHP/fonction.php';
         $queryAdherent = $database->prepare('SELECT * FROM plld_adherent;');
         $queryAdherent->execute();
         $adherents = $queryAdherent->fetchAll();
+
+        $queryPilote = $database->prepare('SELECT * FROM plld_pilote;');
+        $queryPilote->execute();
+        $pilotes = $queryPilote->fetchAll();
+
+        $queryUlm = $database->prepare('SELECT * FROM plld_ulm;');
+        $queryUlm->execute();
+        $ulms = $queryUlm->fetchAll();
         
 
         // Affiche le tableau des réservations
@@ -68,6 +76,28 @@ require_once 'PHP/fonction.php';
         foreach ($adherents as $adherent)
         {
             echo "<tr><td> {$adherent['name']} {$adherent['surname']} </td><td> {$adherent['mail']} </td><td> {$adherent['activity']} </td><td> {$adherent['age']} </td><td> {$adherent['phone']} </td><td> {$adherent['num']} </td></tr>";
+        }
+        echo '</table>';
+
+        // Affiche le tableau des pilotes
+        echo "<h1>Pilote</h1>
+        <input type='text' id='piloteSearch' onkeyup=\"search('piloteSearch', 'piloteTable')\" placeholder='recherche'>
+        <table id='piloteTable'>
+        <th onclick=\"sortTable(0, 'piloteTable')\">Nom</th><th onclick=\"sortTable(1, 'piloteTable')\">Numéro du pilote</th>";
+        foreach ($pilotes as $pilote)
+        {
+            echo "<tr><td> {$pilote['name']} {$pilote['surname']} </td><td> {$pilote['num']} </td></tr>";
+        }
+        echo '</table>';
+
+        // Affiche le tableau des ULM
+        echo "<h1>ULM</h1>
+        <input type='text' id='ulmSearch' onkeyup=\"search('ulmSearch', 'ulmTable')\" placeholder='recherche'>
+        <table id='ulmTable'>
+        <th onclick=\"sortTable(0, 'ulmTable')\">Modèle</th><th onclick=\"sortTable(1, 'ulmTable')\">Numéro du ulm</th>";
+        foreach ($ulms as $ulm)
+        {
+            echo "<tr><td> {$ulm['type']} </td><td> {$ulm['num']} </td></tr>";
         }
         echo '</table>';
     ?>

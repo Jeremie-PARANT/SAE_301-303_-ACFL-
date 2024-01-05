@@ -27,7 +27,7 @@
             if (isset($_POST['restauration'])) {$activity .= "Service de restauration rapide<br>";}
             if (isset($_POST['hebergement'])) {$activity .= "Hébergement des stagiaires<br>";}
             if (isset($_POST['location'])) {$activity .= "Location d’emplacement ULM<br>";}
-            if (isset($_POST['age'])) {$age = $_POST['age'];} else{$age=null;}
+            if (!empty($_POST['age'])) {$age = $_POST['age'];} else{$age=null;}
             if (isset($_POST['phone'])) {$phone = $_POST['phone'];} else{$phone=null;}
             if (isset($_POST['other'])) {$other = $_POST['other'];} else{$other="";}
 
