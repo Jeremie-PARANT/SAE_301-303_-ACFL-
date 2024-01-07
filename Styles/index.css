@@ -294,7 +294,7 @@ src: url(../Ressources/Fonts/Jomolhari/Jomolhari-Regular.ttf);
 
 /* TEMP */
 #accueil, #events {
-height: 40vw;
+height: 55vw;
 }
 
 
@@ -420,6 +420,8 @@ max-height: 250px;
 .row45 {
 display: flex !important;
 flex-direction: row !important;
+background-color: #003047;
+color: white;
 }
 
 
