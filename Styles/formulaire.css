@@ -17,6 +17,15 @@ input{
     height: 40px;
 }
 
+label{
+    margin: 0 !important;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
 .form{
     background-color: #003047;
     color: white;
@@ -52,5 +61,11 @@ input{
     box-shadow: 5px 5px 10px 10px #5279A2;
 }
 
-#mail{
+.mail{
+    width: 95%;
+}
+
+.other{
+    width: 96%;
+    height: 120px;
 }

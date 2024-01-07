@@ -70,36 +70,36 @@
                             <input class="mx-3 my-2" type="number" name="age" id="" placeholder="Age"><br>
                             <?php if (!empty($errorAge)) { echo $errorAge; } ?>
                         </div>
-                        <input id="mail" class="my-2" type="text" name="mail" id="" placeholder="Email *"><br>
+                        <input class="mail my-2" type="text" name="mail" id="" placeholder="Email *"><br>
                         <?php if (!empty($errorMail)) { echo $errorMail; } ?>
                     </div>
 
                     <!-- Activité -->
                     <div class="flex-column">
                         <div class="px-4 d-flex align-items-center">
-                            <div class="flex-column">
+                            <div class="px-3 flex-column">
                                 <h2>Activité</h2>
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="maintenance" />
-                                    <label for="scales">Maintenance des ULM Moteur</label>
+                                    <label class="px-2" for="scales">Maintenance des ULM Moteur</label>
                                 </div>
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="montage" />
-                                    <label for="scales">Montage des ULM</label>
+                                    <label class="px-2" for="scales">Montage des ULM</label>
                                 </div>
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="restauration" />
-                                    <label for="scales">Service de restauration rapide</label>
+                                    <label class="px-2" for="scales">Service de restauration rapide</label>
                                 </div>
                             </div>
                             <div class="flex-column">
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="hebergement" />
-                                    <label for="scales">Hébergement des stagiaires</label>
+                                    <label class="px-2" for="scales">Hébergement des stagiaires</label>
                                 </div>
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="location" />
-                                    <label for="scales">Location d’emplacement ULM</label>
+                                    <label class="px-2" for="scales">Location d’emplacement ULM</label>
                                 </div>
                             </div>
                         </div>
@@ -107,10 +107,10 @@
             </div>
 
                 <!-- Input + affichage des erreurs -->
-                <input type="text" name="other" id="" placeholder="Other"><br>
+                <input class="other my-2" type="text" name="other" id="" placeholder="Other"><br>
                 <?php if (!empty($errorOther)) { echo $errorOther; } ?>
                 <!-- Bouton submit -->
-                <input class="mx-auto" type="submit">
+                <input class="mx-auto my-3" type="submit">
             </form>
         </div>
     </section>
