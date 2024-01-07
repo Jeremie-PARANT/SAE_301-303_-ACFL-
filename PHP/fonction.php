@@ -56,6 +56,37 @@
         }
     }
 
+    function dateReservError($date_debut, $date_fin, $date)
+    {
+        if (empty($date)) {
+            return '<div class="erreur"> Vous devez remplir le champ date </div>';
+        } else {
+            $today = date("Y-m-d H:i:s");
+            $format = 'Y-m-d';
+            $validate_date = DateTime::createFromFormat($format, $date);
+
+            if ((validateDate($date, $format)) != true) {
+                return '<div class="erreur"> La date n\'est pas une date valide </div>';
+            } elseif ($date > $date_fin || $date < $date_debut) {
+                return '<div class="erreur"> La date doit être comprise entre la date de début et la date de fin </div>';
+            } else {
+                return false;
+            }
+        }
+    }
+
+    function numError($num) {
+        if (!is_numeric($num)){
+            return "<div class='erreur'> L'age doit être un nombre. </div><br>";
+        }
+        elseif ($num<0){
+            return "<div class='erreur'> Le num ne peut pas être négatif </div><br>";
+        }
+        else{
+            return false;
+        }
+    }
+
 
 
 ?>
