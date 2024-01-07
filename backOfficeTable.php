@@ -36,6 +36,17 @@ require_once 'PHP/fonction.php';
         $queryUlm->execute();
         $ulms = $queryUlm->fetchAll();
         
+        // Nav bar
+        echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+                <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="#home">Accueil</a></li>
+                </ul>
+                <ul class="navbar-nav mb-0">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
+                    <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+                </ul>
+            </nav><br><br><br>';
+
 
         // Affiche le tableau des réservations
         echo "<h1 class='sectionTitle'>Réservation</h1>

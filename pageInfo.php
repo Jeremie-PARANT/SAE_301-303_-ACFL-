@@ -20,11 +20,23 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+        <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="#home">Accueil</a></li>
+        </ul>
+        <ul class="navbar-nav mb-0">
+            <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
+            <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+        </ul>
+    </nav><br><br><br>
+
     <h1 class="sectionTitle">Page d'information</h1>
     <div>
         Votre réservation à bien été envoyer. <br>
         Nous comfirmerons votre réservation, ainsi que la date la date précise, dans les jour a venir.
     </div>
+    
     <?php
     /*
         if(!empty($CurrentNum))
