@@ -46,10 +46,12 @@ require_once 'PHP/adherent.php';
 
     <!-- Formulaire, avec affichage des erreurs -->
     <form action="connexion.php" method="post">
-        <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
-        <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
-        <?php if (!empty($error)) { echo $error; } ?>
-        <input type="submit" value="Connexion">
+        <div class="mx-auto d-flex flex-column">
+            <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
+            <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
+            <?php if (!empty($error)) { echo $error; } ?>
+            <input type="submit" value="Connexion">
+        </div>
     </form>
 </body>
 </html>
