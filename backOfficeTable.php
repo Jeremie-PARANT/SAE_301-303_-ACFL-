@@ -44,7 +44,7 @@ require_once 'PHP/fonction.php';
         <th onclick=\"sortTable(0, 'reservationTable')\"><div>Adhérent<div></th><th onclick=\"sortTable(1, 'reservationTable')\"><div>Date début<div></th><th onclick=\"sortTable(2, 'reservationTable')\"><div>Date Fin<div></th><th onclick=\"sortTable(3, 'reservationTable')\"><div>Status<div></th><th onclick=\"sortTable(4, 'reservationTable')\"><div>Numéro de réservation<div></th><th onclick=\"sortTable(5, 'reservationTable')\"><div>Détails</th>";
         foreach ($reservations as $reservation)
         {
-            echo "<tr><td> {$reservation['adherent_name']} {$reservation['adherent_surname']} </td><td> {$reservation['date_debut']} </td><td> {$reservation['date_fin']} </td><td> {$reservation['status']} </td><td> {$reservation['num']} </td><td><a href=\"details.php?num={$reservation['num']}\"><div class=\"details\">Détails</div></a></td></tr>";
+            echo "<tr><td>" . htmlspecialchars("{$reservation['adherent_name']} {$reservation['adherent_surname']}") . "</td><td>" . htmlspecialchars("{$reservation['date_debut']}") . "</td><td>" . htmlspecialchars("{$reservation['date_fin']}") . "</td><td>" . htmlspecialchars("{$reservation['status']}") . "</td><td>" . htmlspecialchars("{$reservation['num']}") . "</td><td><a href=\"details.php?num=" . htmlspecialchars($reservation['num']) . "\"><div class=\"details\">Détails</div></a></td></tr>";
         }
         echo '</table><hr>';
 
@@ -55,7 +55,7 @@ require_once 'PHP/fonction.php';
         <th onclick=\"sortTable(0, 'adherentTable')\"><div>Nom<div></th><th onclick=\"sortTable(1, 'adherentTable')\"><div>Mail<div></th><th onclick=\"sortTable(2, 'adherentTable')\"><div>Activité<div></th><th onclick=\"sortTable(3, 'adherentTable')\"><div>Age<div></th><th onclick=\"sortTable(4, 'adherentTable')\"><div>Numéro de téléphone<div></th><th onclick=\"sortTable(4, 'adherentTable')\"><div>Numéro d'identification</th>";
         foreach ($adherents as $adherent)
         {
-            echo "<tr><td> {$adherent['name']} {$adherent['surname']} </td><td> {$adherent['mail']} </td><td> {$adherent['activity']} </td><td> {$adherent['age']} </td><td> {$adherent['phone']} </td><td> {$adherent['num']} </td></tr>";
+            echo "<tr><td>" . htmlspecialchars("{$adherent['name']} {$adherent['surname']}") . "</td><td>" . htmlspecialchars("{$adherent['mail']}") . "</td><td>" . "{$adherent['activity']}" . "</td><td>" . htmlspecialchars("{$adherent['age']}") . "</td><td>" . htmlspecialchars("{$adherent['phone']}") . "</td><td>" . htmlspecialchars("{$adherent['num']}") . "</td></tr>";
         }
         echo '</table><hr>';
 
@@ -66,7 +66,7 @@ require_once 'PHP/fonction.php';
         <th onclick=\"sortTable(0, 'piloteTable')\"><div>Nom<div></th><th onclick=\"sortTable(1, 'piloteTable')\"><div>Numéro du pilote</th>";
         foreach ($pilotes as $pilote)
         {
-            echo "<tr><td> {$pilote['name']} {$pilote['surname']} </td><td> {$pilote['num']} </td></tr>";
+            echo "<tr><td>" . htmlspecialchars("{$pilote['name']} {$pilote['surname']}") . "</td><td>" . htmlspecialchars("{$pilote['num']}") . "</td></tr>";
         }
         echo '</table><hr>';
 
@@ -77,7 +77,7 @@ require_once 'PHP/fonction.php';
         <th onclick=\"sortTable(0, 'ulmTable')\"><div>Modèle<div></th><th onclick=\"sortTable(1, 'ulmTable')\"><div>Numéro du ulm</th>";
         foreach ($ulms as $ulm)
         {
-            echo "<tr><td> {$ulm['type']} </td><td> {$ulm['num']} </td></tr>";
+            echo "<tr><td>" . htmlspecialchars("{$ulm['type']}") . "</td><td>" . htmlspecialchars("{$ulm['num']}") . "</td></tr>";
         }
         echo '</table><hr>';
     ?>
