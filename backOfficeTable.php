@@ -44,9 +44,9 @@ require_once 'PHP/fonction.php';
         <th onclick=\"sortTable(0, 'reservationTable')\"><div>Adhérent<div></th><th onclick=\"sortTable(1, 'reservationTable')\"><div>Date début<div></th><th onclick=\"sortTable(2, 'reservationTable')\"><div>Date Fin<div></th><th onclick=\"sortTable(3, 'reservationTable')\"><div>Status<div></th><th onclick=\"sortTable(4, 'reservationTable')\"><div>Numéro de réservation<div></th><th onclick=\"sortTable(5, 'reservationTable')\"><div>Détails</th>";
         foreach ($reservations as $reservation)
         {
-            echo "<tr><td> {$reservation['adherent_name']} {$reservation['adherent_surname']} </td><td> {$reservation['date_debut']} </td><td> {$reservation['date_fin']} </td><td> {$reservation['status']} </td><td> {$reservation['num']} </td><td><a href=\"details.php?num={$reservation['num']}\"><div class=\"details\">Link</div></a></td></tr>";
+            echo "<tr><td> {$reservation['adherent_name']} {$reservation['adherent_surname']} </td><td> {$reservation['date_debut']} </td><td> {$reservation['date_fin']} </td><td> {$reservation['status']} </td><td> {$reservation['num']} </td><td><a href=\"details.php?num={$reservation['num']}\"><div class=\"details\">Détails</div></a></td></tr>";
         }
-        echo '</table>';
+        echo '</table><hr>';
 
         // Affiche le tableau des adhérents
         echo "<h1 class='sectionTitle'>Adherent</h1>
@@ -57,7 +57,7 @@ require_once 'PHP/fonction.php';
         {
             echo "<tr><td> {$adherent['name']} {$adherent['surname']} </td><td> {$adherent['mail']} </td><td> {$adherent['activity']} </td><td> {$adherent['age']} </td><td> {$adherent['phone']} </td><td> {$adherent['num']} </td></tr>";
         }
-        echo '</table>';
+        echo '</table><hr>';
 
         // Affiche le tableau des pilotes
         echo "<h1 class='sectionTitle'>Pilote</h1>
@@ -68,7 +68,7 @@ require_once 'PHP/fonction.php';
         {
             echo "<tr><td> {$pilote['name']} {$pilote['surname']} </td><td> {$pilote['num']} </td></tr>";
         }
-        echo '</table>';
+        echo '</table><hr>';
 
         // Affiche le tableau des ULM
         echo "<h1 class='sectionTitle'>ULM</h1>
@@ -79,7 +79,7 @@ require_once 'PHP/fonction.php';
         {
             echo "<tr><td> {$ulm['type']} </td><td> {$ulm['num']} </td></tr>";
         }
-        echo '</table>';
+        echo '</table><hr>';
     ?>
 
 
