@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0 1vw !important;
+    text-align: center !important;
+}
+td {
+    padding : 5px 15px;
+    border : 1px solid black;
+    text-align: center;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th {
+    background-color: rgb(200, 200, 200, 0.5);
+    border : 1px solid black;
+    cursor: pointer;
+    padding: 0.25vw 1.6vw;
+}
+th > div:hover {
+    scale: 1.2;
+    transition-duration: 300ms;
+}
+input {
+    margin: 0 0 10px 0;
+}
