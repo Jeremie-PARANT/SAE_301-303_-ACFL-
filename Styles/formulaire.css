@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: #003047 !important;
-    color: white !important;
-}
 
 .inscriptionAdherant {
     margin: auto;
@@ -15,6 +11,19 @@ body {
 
 input[type="checkbox"] {
     width: auto !important;
+}
+
+input{
+    height: 40px;
+}
+
+.form{
+    background-color: #003047;
+    color: white;
+    width: 90%;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .erreur {
@@ -33,6 +42,7 @@ input[type="checkbox"] {
     color: #003047 !important;
     padding: 5px;
 }
+
 .aucentre{
     margin: 5vw auto 0 auto;
     text-align: center;
@@ -40,4 +50,7 @@ input[type="checkbox"] {
     background-color: #5279A2;
     width: 800px;
     box-shadow: 5px 5px 10px 10px #5279A2;
+}
+
+#mail{
 }
