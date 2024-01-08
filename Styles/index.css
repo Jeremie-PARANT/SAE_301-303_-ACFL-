@@ -294,7 +294,7 @@ src: url(../Ressources/Fonts/Jomolhari/Jomolhari-Regular.ttf);
 
 /* TEMP */
 #accueil, #events {
-height: 40vw;
+height: 55vw;
 }
 
 
@@ -360,7 +360,7 @@ visibility: hidden;
 background-color: #003047;
 color: white;
 width: 50vw !important;
-height: 20vw !important;
+height: 26vw !important;
 align-content: center;
 }
 .banner2 h1 {
@@ -413,16 +413,39 @@ text-align: center;
 }
 .row45 img {
 display: block;
-margin: 0 auto;
+margin: auto 0 auto 0;
 max-width: 100%;
-max-height: 250px;
+max-height: 300px;
+
 }
 .row45 {
 display: flex !important;
 flex-direction: row !important;
+
+background-color: #003047;
+color: white;
 }
+.jsp{
+    display: grid;
+    align-items: center;
+}
+.taille{
+    font-size: 3em;
+}
+.underline{
+    text-decoration: underline;
+}
+.couleurp{
+    clip-path: polygon(0 0, 85% 0, 100% 99%, 0% 100%);
+    background-color: white;
+    color: #003047;
+}
+.couleurp2{
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    background-color: white;
+    color: #003047;
 
-
+}
 
 /*CSS Arno*/
 

@@ -1,4 +1,4 @@
-// Déclarez la fonction en dehors de la fonction anonyme
+
 function startAnimation(videoId) {
     var animationVideo = document.getElementById(videoId);
 
@@ -13,6 +13,16 @@ function startAnimation(videoId) {
         animationVideo.pause();
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var animationVideo = document.getElementById('animationVideo');
+
+    animationVideo.play();
+
+    animationVideo.addEventListener('ended', function () {
+        animationVideo.currentTime = 0;
+    });
+});
 
 //JS Ruben
 $(document).ready(function () {

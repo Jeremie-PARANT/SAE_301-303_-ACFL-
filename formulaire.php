@@ -22,11 +22,9 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             //Création des des variable optionnel
             $activity = "";
-            if (isset($_POST['maintenance'])) {$activity .= "Maintenance des ULM Moteur<br>";}
-            if (isset($_POST['montage'])) {$activity .= "Montage des ULM<br>";}
-            if (isset($_POST['restauration'])) {$activity .= "Service de restauration rapide<br>";}
-            if (isset($_POST['hebergement'])) {$activity .= "Hébergement des stagiaires<br>";}
-            if (isset($_POST['location'])) {$activity .= "Location d’emplacement ULM<br>";}
+            if (isset($_POST['pilotage'])) {$activity .= "Cours de pilotage<br>";}
+            if (isset($_POST['bapteme'])) {$activity .= "Baptême de l'air<br>";}
+            if (isset($_POST['reparation'])) {$activity .= "Cours de réparation<br>";}
             if (!empty($_POST['age'])) {$age = $_POST['age'];} else{$age=null;}
             if (isset($_POST['phone'])) {$phone = $_POST['phone'];} else{$phone=null;}
             if (isset($_POST['other'])) {$other = $_POST['other'];} else{$other="";}
@@ -81,11 +79,9 @@
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     //Création des des variable optionnel
                     $activity = "";
-                    if (isset($_POST['maintenance'])) {$activity .= "Maintenance des ULM Moteur<br>";}
-                    if (isset($_POST['montage'])) {$activity .= "Montage des ULM<br>";}
-                    if (isset($_POST['restauration'])) {$activity .= "Service de restauration rapide<br>";}
-                    if (isset($_POST['hebergement'])) {$activity .= "Hébergement des stagiaires<br>";}
-                    if (isset($_POST['location'])) {$activity .= "Location d’emplacement ULM<br>";}
+                    if (isset($_POST['pilotage'])) {$activity .= "Cours de pilotage<br>";}
+                    if (isset($_POST['bapteme'])) {$activity .= "Baptême de l'air<br>";}
+                    if (isset($_POST['reparation'])) {$activity .= "Cours de réparation<br>";}
                     if (!empty($_POST['age'])) {$age = $_POST['age'];} else{$age=null;}
                     if (isset($_POST['phone'])) {$phone = $_POST['phone'];} else{$phone=null;}
                     if (isset($_POST['other'])) {$other = $_POST['other'];} else{$other="";}
@@ -136,26 +132,18 @@
                             <div class="px-3 flex-column">
                                 <h2>Activité</h2>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="" name="maintenance" />
-                                    <label class="px-2" for="scales">Maintenance des ULM Moteur</label>
+                                    <input type="checkbox" id="" name="pilotage" />
+                                    <label class="px-2" for="scales">Cours de Pilotage</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="" name="montage" />
-                                    <label class="px-2" for="scales">Montage des ULM</label>
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" id="" name="restauration" />
-                                    <label class="px-2" for="scales">Service de restauration rapide</label>
+                                    <input type="checkbox" id="" name="bapteme" />
+                                    <label class="px-2" for="scales">baptême de l’air</label>
                                 </div>
                             </div>
                             <div class="flex-column">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="" name="hebergement" />
-                                    <label class="px-2" for="scales">Hébergement des stagiaires</label>
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" id="" name="location" />
-                                    <label class="px-2" for="scales">Location d’emplacement ULM</label>
+                                    <input type="checkbox" id="" name="reparation" />
+                                    <label class="px-2" for="scales">Cours de réparation</label>
                                 </div>
                             </div>
                         </div>
