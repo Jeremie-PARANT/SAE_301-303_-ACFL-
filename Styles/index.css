@@ -439,6 +439,7 @@ width: 20vw;
 
 .cardBottom{
 width: 20vw;
+height: 40vh;
 position: relative;
 background-color: #003047;
 color: white;
@@ -459,10 +460,12 @@ justify-content: space-between;
 align-items: center;
 }
 
-#ulmCardPhoto{
+.ulmCardPhoto{
 width: 20vw;
+height: 32vh;
 border-top-right-radius: 1em;
 border-top-left-radius: 1em;
+object-fit: cover;
 }
 
 .buttonCustom{
@@ -480,6 +483,12 @@ scale: 1.1;
 .prixCustom{
 font-family: 'Jomhuria';
 font-size: 1.6em !important;
+}
+
+.bottom{
+    position: relative;
+    bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /* Galerie */

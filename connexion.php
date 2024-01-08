@@ -46,7 +46,7 @@ require_once 'PHP/adherent.php';
 
     <!-- Formulaire, avec affichage des erreurs -->
     <form action="connexion.php" method="post">
-        <div class="mx-auto d-flex flex-column">
+        <div class="login d-flex flex-column">
             <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
             <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
             <?php if (!empty($error)) { echo $error; } ?>
