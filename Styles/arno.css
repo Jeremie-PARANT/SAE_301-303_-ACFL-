@@ -31,12 +31,6 @@
   align-items: center;
 }
 
-#ulmCardPhoto{
-  width: 20vw;
-  border-top-right-radius: 1em;
-  border-top-left-radius: 1em;
-}
-
 .buttonCustom{
   transition: 300ms !important;
   font-family: 'Jomhuria';
@@ -52,6 +46,13 @@
 .prixCustom{
   font-family: 'Jomhuria';
   font-size: 1.6em !important;
+}
+
+#ulmCardPhoto{
+  width: 20vw;
+  height: 10px !important;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
 }
 
 /* Galerie */
