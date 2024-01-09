@@ -16,6 +16,10 @@ require_once 'PHP/adherent.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Connexion</title>
+<style>
+
+
+</style>
 </head>
 <body>
     <?php
@@ -45,13 +49,25 @@ require_once 'PHP/adherent.php';
 
 
     <!-- Formulaire, avec affichage des erreurs -->
-    <form action="connexion.php" method="post">
-        <div class="login d-flex flex-column">
-            <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
-            <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
-            <?php if (!empty($error)) { echo $error; } ?>
-            <input type="submit" value="Connexion">
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+            <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+                <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="index.html">Accueil</a></li>
+            </ul>
+            <ul class="navbar-nav mb-0">
+                <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
+                <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+            </ul>
+		</nav>	
+
+
+<div class="margint">
+    <h2 class="text-center">Identifiants :</h2>
+    <form action="connexion.php" method="post" class="login d-flex flex-column align-items-center">
+        <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
+        <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
+        <?php if (!empty($error)) { echo $error; } ?>
+        <input type="submit" value="Connexion">
     </form>
+</div>
 </body>
 </html>
