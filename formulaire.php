@@ -15,7 +15,7 @@
     <link href="Styles/formulaire.css" rel="stylesheet" type="text/css" media="all">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <sc src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <?php
@@ -169,15 +169,11 @@
             </form>
         </div>
     </section>
-
-
+    
     <script>
-    // Fonction pour afficher l'alerte
     function showAlert() {
         return "Attention ! Vous avez des informations non sauvegardées. Êtes-vous sûr de vouloir quitter cette page ?";
     }
-
-    // Attachement de l'événement "beforeunload" pour détecter la tentative de fermeture de la page
     $(window).on('beforeunload', function () {
         // Vérifie si des champs du formulaire ont été remplis
         var formFields = $('form :input').filter(function () {
@@ -194,8 +190,7 @@
     $('form').submit(function () {
         $(window).off('beforeunload');
     });
-</script>
-
+    </script>
     
 </body>
 </html>

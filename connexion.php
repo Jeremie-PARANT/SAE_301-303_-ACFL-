@@ -39,7 +39,7 @@ require_once 'PHP/adherent.php';
             // Les identifiants saisis existent
             if ($num !== false) {
                 $_SESSION['currentAdherent'] = $num;
-                header("Location: reservation.php");
+                header("Location: profil.php");
             } else {
                 // Les identifiants saisis n'existent pas, renvoie erreur
                 $error = "<div class='erreur'> Identifiant incorrectes </div>";

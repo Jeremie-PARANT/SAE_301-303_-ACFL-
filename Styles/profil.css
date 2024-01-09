@@ -1,0 +1,9 @@
+body{
+    text-align: left !important;
+}
+.infos_p{
+    
+    border: 0.3em solid #003047;
+    width: 25vw;
+    padding: 2vw;
+}
