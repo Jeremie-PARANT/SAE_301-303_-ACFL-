@@ -1,6 +1,11 @@
 <?php
 session_start();
 $autorisation = $_SESSION['autorisation'];
+if (empty($autorisation)) {
+    // Redirect to the login page
+    header("Location: connexion.php");
+    exit();
+}
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();

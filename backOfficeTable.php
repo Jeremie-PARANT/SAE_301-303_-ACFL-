@@ -5,6 +5,12 @@ $autorisation = $_SESSION['autorisation'];
 require_once 'PHP/database.php';
 $database = new App\Database\database();
 require_once 'PHP/fonction.php';
+if (empty($autorisation)) {
+    // Redirect to the login page
+    header("Location: connexion.php");
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
