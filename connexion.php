@@ -22,30 +22,39 @@ require_once 'PHP/adherent.php';
 </style>
 </head>
 <body>
-    <?php
-        $error = null;
-        // si les champs ont été remplis, effectue la vérification
-        if(!empty($_POST['num']) && !empty($_POST['mail']))
-        {
-            $postNum = $_POST['num'];
-            $postmail = $_POST['mail'];
+<?php
+$error = null;
 
-            $query = $database->prepare("SELECT num FROM plld_adherent WHERE num = :num AND mail = :mail");
-            $query->bindParam(':num', $postNum);
-            $query->bindParam(':mail', $postmail);
-            $query->execute();
-            $num = $query->fetchColumn();
+// si les champs ont été remplis, effectue la vérification
+if (!empty($_POST['num']) && !empty($_POST['mail'])) {
+    $postNum = $_POST['num'];
+    $postmail = $_POST['mail'];
 
-            // Les identifiants saisis existent
-            if ($num !== false) {
-                $_SESSION['currentAdherent'] = $num;
-                header("Location: profil.php");
-            } else {
-                // Les identifiants saisis n'existent pas, renvoie erreur
-                $error = "<div class='erreur'> Identifiant incorrectes </div>";
-            }
-        }
-    ?>
+    $query = $database->prepare("SELECT * FROM plld_adherent WHERE num = :num AND mail = :mail");
+    $query->bindParam(':num', $postNum);
+    $query->bindParam(':mail', $postmail);
+    $query->execute();
+
+    // Récupérer les données de l'adhérent
+    $adherentData = $query->fetch(PDO::FETCH_ASSOC);
+
+    // Les identifiants saisis existent
+    if ($adherentData !== false) {
+        // Sauvegarder les informations dans des variables
+        $num = $adherentData['num'];
+        $autorisation = $adherentData['autorisation'];
+
+        // Enregistrer les variables de session
+        $_SESSION['currentAdherent'] = $num;
+        $_SESSION['autorisation'] = $autorisation;
+        header("Location: profil.php");
+    } else {
+        // Les identifiants saisis n'existent pas, renvoie erreur
+        $error = "<div class='erreur'> Identifiant incorrectes </div>";
+    }
+}
+?>
+
 
 
     <!-- Formulaire, avec affichage des erreurs -->

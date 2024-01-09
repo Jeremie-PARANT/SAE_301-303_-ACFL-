@@ -14,6 +14,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation</title>
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="Styles/reservation.css">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -42,21 +43,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
 
     <!-- Formulaire, avec affichage des erreurs -->
-    <h1>Réservation</h1>
-    <div>Veuillez préciser un interval de date de disponibilité</div>
+    <h1 class="couleur-titre">Réservation :</h1>
+<div class="backgroundcolor2 w-50 mx-auto">
+
+
+    <!-- Formulaire, avec affichage des erreurs -->
+
+    <div class="mb-3">Veuillez préciser un interval de date de disponibilité :</div>
     <form class="reservation" action="reservation.php" method="post">
-        <label for="date_debut">Date de début *</label>
+        <label class="mb-3" for="date_debut">Date de début *</label>
         <input type="date" name="date_debut" id=""><br>
 
-        <label for="date_fin">Date de fin *</label>
+        <label class="mb-3"  for="date_fin">Date de fin *</label>
         <input type="date" name="date_fin" id=""><br>
         <?php if (!empty($errorModel)) { echo $errorModel; } ?>
 
-        <input type="text" name="model" id="" placeholder="Modèle souhaité">
+        <input class="mb-4" type="text" name="model" id="" placeholder="Modèle souhaité">
         <?php if (!empty($errorDate)) { echo $errorDate; } ?>
-
-        <input type="submit" value="envoie">
+        <br>
+        <input class="d-block mx-auto" type="submit" value="envoie">
     </form>
+</div>
 
 
 

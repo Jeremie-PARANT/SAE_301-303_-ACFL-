@@ -1,6 +1,7 @@
 <?php
 session_start();
 $adherent = $_SESSION['currentAdherent'];
+$autorisation = $_SESSION['autorisation'];
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -37,13 +38,16 @@ require_once 'PHP/fonction.php';
         echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
                 <ul class="navbar-nav navbar-left mb-0" id="main-menu">
                     <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>
-                </ul>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>'; 
+                if ($autorisation == 1){
+                    echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>'
+                ;}
+                echo '</ul>
                 <ul class="navbar-nav mb-0">
                     <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
                 </ul>
             </nav><br><br><br>';
-        //Affiche toutes les informations de l'utilisateur
+        
         
         
             // Affiche les information de l'utilisateur actuel
@@ -72,10 +76,10 @@ require_once 'PHP/fonction.php';
         echo "<h1 class='sectionTitle'>Vos réservation :</h1>
         
         <table id='reservationTable'>
-        <th onclick=\"sortTable(0, 'reservationTable')\"><div>Adhérent<div></th><th onclick=\"sortTable(1, 'reservationTable')\"><div>Date début<div></th><th onclick=\"sortTable(2, 'reservationTable')\"><div>Date Fin<div></th><th onclick=\"sortTable(3, 'reservationTable')\"><div>Status<div></th><th onclick=\"sortTable(4, 'reservationTable')\"><div>Numéro de réservation<div></th>";
+        <th onclick=\"sortTable(0, 'reservationTable')\"><div>Adhérent<div></th><th onclick=\"sortTable(1, 'reservationTable')\"><div>Date début<div></th><th onclick=\"sortTable(2, 'reservationTable')\"><div>Date Fin<div></th><th onclick=\"sortTable(3, 'reservationTable')\"><div>Model<div></th><th onclick=\"sortTable(4, 'reservationTable')\"><div>Status<div></th><th onclick=\"sortTable(5, 'reservationTable')\"><div>Numéro de réservation<div></th>";
         foreach ($reservations as $reservation)
         {
-            echo "<tr><td>" . htmlspecialchars("{$reservation['adherent_name']} {$reservation['adherent_surname']}") . "</td><td>" . htmlspecialchars("{$reservation['date_debut']}") . "</td><td>" . htmlspecialchars("{$reservation['date_fin']}") . "</td><td>" . htmlspecialchars("{$reservation['status']}") . "</td><td>" . htmlspecialchars("{$reservation['num']}") . "</td></tr>";
+            echo "<tr><td>" . htmlspecialchars("{$reservation['adherent_name']} {$reservation['adherent_surname']}") . "</td><td>" . htmlspecialchars("{$reservation['date_debut']}") . "</td><td>" . htmlspecialchars("{$reservation['date_fin']}") . "</td><td>" . htmlspecialchars("{$reservation['model']}") . "</td><td>" . htmlspecialchars("{$reservation['status']}") . "</td><td>" . htmlspecialchars("{$reservation['num']}") . "</td></tr>";
         }
         echo '</table><hr>';
     ?>
