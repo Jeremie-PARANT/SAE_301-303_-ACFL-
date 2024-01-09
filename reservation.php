@@ -1,5 +1,6 @@
 <?php
 session_start();
+$autorisation = $_SESSION['autorisation'];
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -15,6 +16,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <title>Réservation</title>
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="Styles/reservation.css">
+    <link rel="stylesheet" href="Styles/formulaire.css">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -27,19 +29,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $errorModel = (!empty($_POST['model'])) ? modelError($_POST['model']) : false;
     $errorDate = (!empty($_POST['date_debut']) && !empty($_POST['date_fin'])) ? dateError($_POST['date_debut'], $_POST['date_fin']) : "<div class='erreur'> Les dates sont obligatoires. </div><br>";
 }
-?>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
-        <ul class="navbar-nav navbar-left mb-0" id="main-menu">
-            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
-            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>
-        </ul>
-        <ul class="navbar-nav mb-0">
-            <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se deconnecter</a></li>
-        </ul>
-    </nav>
 
+    //Navbar
+    echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+                <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>'; 
+                    if ($autorisation == 1){
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
+                    }
+                echo '</ul>
+                <ul class="navbar-nav mb-0">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
+                </ul>
+            </nav><br><br><br>';
 
+            ?>
 
 
     <!-- Formulaire, avec affichage des erreurs -->
