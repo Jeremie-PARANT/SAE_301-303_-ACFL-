@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     // Appelle la BDD et de la classe adherent
     require_once 'PHP/database.php';
     $database = new App\Database\database();
@@ -65,13 +66,30 @@
 
                 $query->execute();
 
+                $query2 = $database->prepare("SELECT autorisation FROM plld_adherent WHERE num = :num");
+                $query2->bindParam(':num', $newNum);
+                $query2->execute();
+                $admin = $query2->fetch(PDO::FETCH_ASSOC);
+                $autorisation = $admin['autorisation'];
                 // Sauvegarder nouveau num, pour afficher dans page de remerciement
                 $_SESSION['currentAdherent'] = $newNum;
+                $_SESSION['autorisation'] = $autorisation;
                 header("Location: remerciement.php");
                 
             }
         }
     ?>
+
+<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+    <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+        <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="index.html">Accueil</a></li>
+    </ul>
+    <ul class="navbar-nav mb-0">
+        <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
+        <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+    </ul>
+</nav>
+<br>
     <section>
         <h1 class="ml-5 mt-5 mb-4 sectionTitle">Formulaire</h1>
         <div class="form p-3">
@@ -158,6 +176,31 @@
             </form>
         </div>
     </section>
+    
+    <script>
+    // Fonction pour afficher l'alerte
+    function showAlert() {
+        return "Attention ! Vous avez des informations non sauvegardées. Êtes-vous sûr de vouloir quitter cette page ?";
+    }
+
+    // Attachement de l'événement "beforeunload" pour détecter la tentative de fermeture de la page
+    $(window).on('beforeunload', function () {
+        // Vérifie si des champs du formulaire ont été remplis
+        var formFields = $('form :input').filter(function () {
+            return $.trim($(this).val()).length > 0;
+        });
+
+        // Affiche l'alerte si des champs sont remplis
+        if (formFields.length > 0) {
+            return showAlert();
+        }
+    });
+
+    // Attachement de l'événement "submit" pour vider les champs lorsque le formulaire est soumis
+    $('form').submit(function () {
+        $(window).off('beforeunload');
+    });
+</script>
 
     
 </body>

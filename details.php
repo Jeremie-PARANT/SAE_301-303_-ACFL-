@@ -1,4 +1,6 @@
 <?php
+session_start();
+$autorisation = $_SESSION['autorisation'];
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -20,6 +22,8 @@ $envoyer = '';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+
+<a href="backOfficeTable.php" class="back-link">&#9665; Retour</a>
     <?php
     // MESSAGE POUR LE FUTUR DEV FRONT --> Le code peut paraite compliquer, du coup ignore la moitier du code, il n'y a que 2 endroit a modifier
     // endroit avec du front a modifier "Récapitulatif des information de réservations" et "Formulaire + affichage des erreurs"
@@ -46,14 +50,22 @@ $envoyer = '';
         // Nav bar
         echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
                 <ul class="navbar-nav navbar-left mb-0" id="main-menu">
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="#home">Accueil</a></li>
-                </ul>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>'; 
+                    if ($autorisation == 1){
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addULM.php">AddULM</a></li>';
+                    }
+                echo '</ul>
                 <ul class="navbar-nav mb-0">
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
-                    <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
                 </ul>
             </nav><br><br><br>';
-            echo "<br><h2 class='subTitle'>Détails de la réservations</h2>";
+
+            
+            echo '<div class="backgroundcolor3">';
+            echo "<br><h2 class='subTitle pb-3'>Détails de la réservations</h2>";
             // Récapitulatif des information de réservations
             foreach ($reservations as $reservation)
             {
@@ -65,11 +77,11 @@ $envoyer = '';
                     <div class='info'> date de fin : {$dateDebut} </div>
                     <div class='info'> date de fin : {$dateFin} </div>
                     <div class='info'> modèle souhaité : {$reservation['model']} </div>
-                    <div class='info'> Status de la réservation {$reservation['status']} </div>
-                    <div class='info'> Numéro de la réservation {$reservation['num']} </div>
+                    <div class='info'> Status de la réservation : {$reservation['status']} </div>
+                    <div class='info pb-3'> Numéro de la réservation : {$reservation['num']} </div>
                 </div>";
             }
-
+            
 
 
 
@@ -123,7 +135,7 @@ $envoyer = '';
 
             echo '<br><input type="submit"><br>';
             
-
+            echo '</div>';
 
             
 
@@ -158,5 +170,11 @@ $envoyer = '';
         echo "aucune réservation sélectionner";
     }
     ?>
+
+
+
+
+
+
 </body>
 </html>

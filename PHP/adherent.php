@@ -33,6 +33,10 @@ class adherent {
         {
             return "<br><br><div class='erreur'> Le nom doit être une chaîne de caractères. </div>";
         }
+        elseif (!preg_match("#^[A-Z]+$#", $name[0])) {
+            $erreur_nom =  '<div class="erreur"> La 1ere lettre en majuscule </div>';
+            return $erreur_nom;
+        }
         elseif (strlen($name)<2)
         {
             return "<br><br><div class='erreur'> Votre nom est trop court </div>";
@@ -53,6 +57,10 @@ class adherent {
         }
         elseif (!is_string($surname)){
             return "<br><div class='erreur'> Le prénom doit être une chaîne de caractères. </div>";
+        }
+        elseif (!preg_match("#^[A-Z]+$#", $surname[0])) {
+            $erreur_nom =  '<div class="erreur"> La 1ere lettre en majuscule </div>';
+            return $erreur_nom;
         }
         elseif (strlen($surname)<2){
             return "<br><div class='erreur'> Votre prénom est trop court </div>";
