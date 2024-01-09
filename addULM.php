@@ -24,8 +24,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
 // Gestions des erreurs
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $errorName = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : "<div class='erreur'> Le nom est obligatoire. </div><br>";
-    $errorFirstname = (!empty($_POST['firstnamePilote'])) ? firstnameError($_POST['firstnamePilote']) : "<div class='erreur'> Le prénom est obligatoire. </div><br>";
+    $errorType = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : "<div class='erreur'> Le nom est obligatoire. </div><br>";
 }
 ?>
 
@@ -44,13 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     <h1 class="mt-5">Ajouter un pilote</h1>
     <div>Veuillez préciser le nom et prénom du pilote</div>
     <form class="reservation" action="addPilote.php" method="post">
-        <label>Nom du pilote</label>
-        <input placeholder="Nom" type="text" name="namePilote" id=""><br>
+        <label>Type de l'ULM</label>
+        <input placeholder="Type" type="text" name="typeULM" id=""><br>
         <?php if (!empty($errorName)) { echo $errorName; } ?>
-
-        <label>Prénom du pilote</label>
-        <input placeholder="Prénom" type="text" name="firstnamePilote" id=""><br>
-        <?php if (!empty($errorFirstname)) { echo $errorFirstname; } ?>
 
         <input type="submit" value="envoie">
     </form>
