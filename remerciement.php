@@ -21,6 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+<h1 class="sectionTitle m-5"> Création du compte avec succès ! </h1>
     <div class="aucentre">
     <?php
         if (!empty($currentAdherent)) {
@@ -31,6 +32,7 @@
 
             // Affiche les information de l'utilisateur actuel
             foreach ($rows as $row) {
+                echo '<h1 class="sectionSubTitle"> Voici le récapitulatif :</h1>';
                 echo "Nom: " . $row['name'] . ' ' . $row['surname'] . "<br>";
                 echo "Age: " . $row['age'] . "<br>";
                 echo "Némero de téléphone: " . $row['phone'] . "<br>";
@@ -41,10 +43,25 @@
             }
         }
     ?>
-    <div class="d-flex justify-content-around">
-    <button class="bouton43 p-2"><a href="reservation.php">Reservation ?</a></button>
-    <button class="bouton43 p-2"><a href="PHP/deconnecter.php">Se déconnecter</a></button>
-    </div>
+    <div id="countdown" class="text-danger">Redirection vers votre profil dans :</div>
 </div>
+
+<script>
+    var seconds = 5;
+
+    function updateCountdown() {
+        document.getElementById('countdown').innerHTML = "Redirection vers votre profil dans : " + seconds + " secondes";
+        seconds--;
+
+        if (seconds < 0) {
+            window.location.href = 'profil.php';
+        } else {
+            setTimeout(updateCountdown, 1000);
+        }
+    }
+
+    // Appelle la fonction pour la première fois
+    updateCountdown();
+</script>
 </body>
 </html>
