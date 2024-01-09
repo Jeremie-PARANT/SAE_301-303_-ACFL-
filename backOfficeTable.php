@@ -46,12 +46,14 @@ require_once 'PHP/fonction.php';
                     if ($autorisation == 1){
                         echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
                         echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addULM.php">AddULM</a></li>';
                     }
                 echo '</ul>
                 <ul class="navbar-nav mb-0">
                     <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
                 </ul>
             </nav>';
+            
 
 
         // Affiche le tableau des réservations
