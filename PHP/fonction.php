@@ -88,11 +88,7 @@
     }
 
     function nameError($name) {
-        if (empty($name))
-        {
-            return "<br><br><div class='erreur'> Le nom est obligatoire. </div>";
-        }
-        elseif (!is_string($name))
+        if (!is_string($name))
         {
             return "<br><br><div class='erreur'> Le nom doit être une chaîne de caractères. </div>";
         }
@@ -111,10 +107,7 @@
     }
 
     function firstnameError($firstname) {
-        if (empty($firstname)){
-            return "<br><div class='erreur'> Le prénom est obligatoire. </div>";
-        }
-        elseif (!is_string($firstname)){
+        if (!is_string($firstname)){
             return "<br><div class='erreur'> Le prénom doit être une chaîne de caractères. </div>";
         }
         elseif (strlen($firstname)<2){

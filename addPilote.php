@@ -23,8 +23,8 @@ $CurrentNum = $_SESSION['currentAdherent'];
 // Gestions des erreurs
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $errorName = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : false;
-    $errorDate = (!empty($_POST['firstnamePilote']) && !empty($_POST['date_fin'])) ? dateError($_POST['date_debut'], $_POST['date_fin']) : "<div class='erreur'> Les dates sont obligatoires. </div><br>";
+    $errorName = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : "<div class='erreur'> Le nom est obligatoire. </div><br>";
+    $errorDate = (!empty($_POST['firstnamePilote'])) ? firstnameError($_POST['firstnamePilote']) : "<div class='erreur'> Le prénom est obligatoire. </div><br>";
 }
 ?>
 
