@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $query->bindParam(':firstnamePilote', $_POST['firstnamePilote']);
 
             $query->execute();
-            header("Location: pageInfo.php");
+            echo "<br><p>Le pilote a bien été ajouté</p><br>";
         }
     }
 ?>

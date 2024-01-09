@@ -24,7 +24,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
 // Gestions des erreurs
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $errorType = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : "<div class='erreur'> Le nom est obligatoire. </div><br>";
+    $errorType = (!empty($_POST['typeULM'])) ? typeError($_POST['typeULM']) : "<div class='erreur'> Le type est obligatoire. </div><br>";
 }
 ?>
 
@@ -40,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
 
     <!-- Formulaire, avec affichage des erreurs -->
-    <h1 class="mt-5">Ajouter un pilote</h1>
-    <div>Veuillez préciser le nom et prénom du pilote</div>
+    <h1 class="mt-5">Ajouter un ULM</h1>
+    <div>Veuillez préciser le type de l'ULM</div>
     <form class="reservation" action="addPilote.php" method="post">
         <label>Type de l'ULM</label>
         <input placeholder="Type" type="text" name="typeULM" id=""><br>
-        <?php if (!empty($errorName)) { echo $errorName; } ?>
+        <?php if (!empty($errorType)) { echo $errorType; } ?>
 
         <input type="submit" value="envoie">
     </form>
@@ -54,15 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         // Envoie a la BDD si pas d'erreur
-            if (empty($errorName) && empty($errorFirstname)){
-            $query = $database->prepare("INSERT INTO plld_pilote(name, surname) VALUES (:namePilote, :firstnamePilote)");
+            if (empty($errorType)){
+            $query = $database->prepare("INSERT INTO plld_ulm(type) VALUES (:typeULM)");
 
             // Protection contre les injection SQL
-            $query->bindParam(':namePilote', $_POST['namePilote']);
-            $query->bindParam(':firstnamePilote', $_POST['firstnamePilote']);
+            $query->bindParam(':typeULM', $_POST['typeULM']);
 
             $query->execute();
-            header("Location: pageInfo.php");
+            echo "<br><p>L'ULM a bien été ajouté</p><br>";
         }
     }
 ?>

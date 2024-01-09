@@ -120,5 +120,19 @@
             return false;
         }
     }
+    function typeError($typeULM) {
+        if (!is_string($typeULM)){
+            return "<br><div class='erreur'> Le type doit être une chaîne de caractères. </div>";
+        }
+        elseif (strlen($typeULM)<2){
+            return "<br><div class='erreur'> Votre prénom est trop court </div>";
+        }
+        elseif (strlen($typeULM)>100){
+            return "<br><div class='erreur'> Votre prénom est trop long </div>";
+        }
+        else{
+            return false;
+        }
+    }
 
 ?>
