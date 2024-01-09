@@ -14,8 +14,6 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation</title>
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
-    <link href="Styles/formulaire.css" rel="stylesheet" type="text/css" media="all">
-    <link href="Styles/reservation.css" rel="stylesheet" type="text/css" media="all">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -36,30 +34,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>
         </ul>
         <ul class="navbar-nav mb-0">
-            <li class="nav-item navbar-brand"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
+            <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se deconnecter</a></li>
         </ul>
     </nav>
 
 
-    <h1 class="couleur-titre">Réservation :</h1>
-<div class="backgroundcolor2 w-50 mx-auto">
+
+
     <!-- Formulaire, avec affichage des erreurs -->
-    
-    <div class="mb-3">Veuillez préciser un interval de date de disponibilité :</div>
+    <h1>Réservation</h1>
+    <div>Veuillez préciser un interval de date de disponibilité</div>
     <form class="reservation" action="reservation.php" method="post">
-        <label class="mb-3" for="date_debut">Date de début *</label>
+        <label for="date_debut">Date de début *</label>
         <input type="date" name="date_debut" id=""><br>
 
-        <label class="mb-3"  for="date_fin">Date de fin *</label>
+        <label for="date_fin">Date de fin *</label>
         <input type="date" name="date_fin" id=""><br>
         <?php if (!empty($errorModel)) { echo $errorModel; } ?>
 
-        <input class="mb-4" type="text" name="model" id="" placeholder="Modèle souhaité">
+        <input type="text" name="model" id="" placeholder="Modèle souhaité">
         <?php if (!empty($errorDate)) { echo $errorDate; } ?>
-<br>
-        <input class="d-block mx-auto" type="submit" value="envoie">
+
+        <input type="submit" value="envoie">
     </form>
-</div>
+
 
 
 
