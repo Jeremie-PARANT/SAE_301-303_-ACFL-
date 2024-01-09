@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     // Appelle la BDD et de la classe adherent
     require_once 'PHP/database.php';
     $database = new App\Database\database();
@@ -30,7 +31,7 @@
 
             // Affiche les information de l'utilisateur actuel
             foreach ($rows as $row) {
-                echo "Nom: " . $row['name'] . $row['surname'] . "<br>";
+                echo "Nom: " . $row['name'] . ' ' . $row['surname'] . "<br>";
                 echo "Age: " . $row['age'] . "<br>";
                 echo "Némero de téléphone: " . $row['phone'] . "<br>";
                 echo "Email: " . $row['mail'] . "<br>";
@@ -40,7 +41,10 @@
             }
         }
     ?>
-    <button class="bouton43"><a href="reservation.php">Reservation ?</a></button>
+    <div class="d-flex justify-content-around">
+    <button class="bouton43 p-2"><a href="reservation.php">Reservation ?</a></button>
+    <button class="bouton43 p-2"><a href="PHP/deconnecter.php">Se déconnecter</a></button>
     </div>
+</div>
 </body>
 </html>
