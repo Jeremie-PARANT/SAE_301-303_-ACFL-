@@ -22,6 +22,8 @@ $envoyer = '';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+
+<a href="backOfficeTable.php" class="back-link">&#9665; Retour</a>
     <?php
     // MESSAGE POUR LE FUTUR DEV FRONT --> Le code peut paraite compliquer, du coup ignore la moitier du code, il n'y a que 2 endroit a modifier
     // endroit avec du front a modifier "Récapitulatif des information de réservations" et "Formulaire + affichage des erreurs"
@@ -60,7 +62,10 @@ $envoyer = '';
                     <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
                 </ul>
             </nav><br><br><br>';
-            echo "<br><h2 class='subTitle'>Détails de la réservations</h2>";
+
+            
+            echo '<div class="backgroundcolor3">';
+            echo "<br><h2 class='subTitle pb-3'>Détails de la réservations</h2>";
             // Récapitulatif des information de réservations
             foreach ($reservations as $reservation)
             {
@@ -72,11 +77,11 @@ $envoyer = '';
                     <div class='info'> date de fin : {$dateDebut} </div>
                     <div class='info'> date de fin : {$dateFin} </div>
                     <div class='info'> modèle souhaité : {$reservation['model']} </div>
-                    <div class='info'> Status de la réservation {$reservation['status']} </div>
-                    <div class='info'> Numéro de la réservation {$reservation['num']} </div>
+                    <div class='info'> Status de la réservation : {$reservation['status']} </div>
+                    <div class='info pb-3'> Numéro de la réservation : {$reservation['num']} </div>
                 </div>";
             }
-
+            
 
 
 
@@ -130,7 +135,7 @@ $envoyer = '';
 
             echo '<br><input type="submit"><br>';
             
-
+            echo '</div>';
 
             
 
@@ -165,5 +170,11 @@ $envoyer = '';
         echo "aucune réservation sélectionner";
     }
     ?>
+
+
+
+
+
+
 </body>
 </html>
