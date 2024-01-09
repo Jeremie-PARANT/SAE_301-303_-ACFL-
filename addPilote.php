@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         <input placeholder="Prénom" type="text" name="firstnamePilote" id=""><br>
         <?php if (!empty($errorFirstname)) { echo $errorFirstname; } ?>
 
-        <input type="submit" value="envoie">
+        <input type="submit" value="envoi">
     </form>
     </div>
 <?php

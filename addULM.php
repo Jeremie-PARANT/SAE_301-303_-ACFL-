@@ -50,12 +50,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     <!-- Formulaire, avec affichage des erreurs -->
     <h1 class="mt-5">Ajouter un ULM</h1>
     <div>Veuillez préciser le type de l'ULM</div>
-    <form class="reservation" action="addPilote.php" method="post">
+    <form class="reservation" action="addULM.php" method="post">
         <label>Type de l'ULM</label>
         <input placeholder="Type" type="text" name="typeULM" id=""><br>
         <?php if (!empty($errorType)) { echo $errorType; } ?>
 
-        <input type="submit" value="envoie">
+        <input type="submit" value="envoi">
     </form>
 
 <?php
