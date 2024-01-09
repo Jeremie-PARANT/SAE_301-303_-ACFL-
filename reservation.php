@@ -30,11 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
         <ul class="navbar-nav navbar-left mb-0" id="main-menu">
-            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="index.html">Accueil</a></li>
+            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.html">Profil</a></li>
         </ul>
         <ul class="navbar-nav mb-0">
-            <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
-            <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+            <li class="nav-item navbar-brand"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
         </ul>
     </nav>
 

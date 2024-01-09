@@ -61,12 +61,12 @@ require_once 'PHP/adherent.php';
 
 
 <div class="margint">
-    <h1 class="text-center">Identifiants :</h1>
+    <h1 class="text-center text-white">Identifiants :</h1>
     <form action="connexion.php" method="post" class="login d-flex flex-column align-items-center">
-        <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
+        <input class="mb-2" type="text" name="num" id="" placeholder="Numéro d'adhérent *">
         <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
         <?php if (!empty($error)) { echo $error; } ?>
-        <input type="submit" value="Connexion">
+        <input class="mt-3" type="submit" value="Connexion">
     </form>
 </div>
 </body>
