@@ -73,3 +73,12 @@ label{
 .login{
     margin-left: auto;
 }
+
+.margint{
+    margin-top: 10vw !important;
+    width: 60vw;
+    margin: auto;
+    background-color: #003047;
+    border-radius: 1em;
+    padding: 3vw 0;
+}
