@@ -87,6 +87,45 @@
         }
     }
 
+    function nameError($name) {
+        if (empty($name))
+        {
+            return "<br><br><div class='erreur'> Le nom est obligatoire. </div>";
+        }
+        elseif (!is_string($name))
+        {
+            return "<br><br><div class='erreur'> Le nom doit être une chaîne de caractères. </div>";
+        }
+        elseif (strlen($name)<2)
+        {
+            return "<br><br><div class='erreur'> Votre nom est trop court </div>";
+        }
+        elseif (strlen($name)>100)
+        {
+            return "<br><div class='erreur'> Votre nom est trop long </div>";
+        }
+        else
+        {
+            return false;
+        }
+    }
 
+    function firstnameError($firstname) {
+        if (empty($firstname)){
+            return "<br><div class='erreur'> Le prénom est obligatoire. </div>";
+        }
+        elseif (!is_string($firstname)){
+            return "<br><div class='erreur'> Le prénom doit être une chaîne de caractères. </div>";
+        }
+        elseif (strlen($firstname)<2){
+            return "<br><div class='erreur'> Votre prénom est trop court </div>";
+        }
+        elseif (strlen($firstname)>100){
+            return "<br><div class='erreur'> Votre prénom est trop long </div>";
+        }
+        else{
+            return false;
+        }
+    }
 
 ?>

@@ -19,20 +19,53 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+<?php
+// Gestions des erreurs
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
+{
+    $errorName = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : false;
+    $errorDate = (!empty($_POST['firstnamePilote']) && !empty($_POST['date_fin'])) ? dateError($_POST['date_debut'], $_POST['date_fin']) : "<div class='erreur'> Les dates sont obligatoires. </div><br>";
+}
+?>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+        <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.html">Profil</a></li>
+        </ul>
+        <ul class="navbar-nav mb-0">
+            <li class="nav-item navbar-brand"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
+        </ul>
+    </nav>
+
 
     <!-- Formulaire, avec affichage des erreurs -->
-    <h1>Ajouter un pilote</h1>
+    <h1 class="mt-5">Ajouter un pilote</h1>
     <div>Veuillez préciser le nom et prénom du pilote</div>
     <form class="reservation" action="addPilote.php" method="post">
-        <label for="date_debut">Nom du pilote</label>
-        <input type="date" name="nomPilote" id=""><br>
+        <label>Nom du pilote</label>
+        <input placeholder="Nom" type="text" name="namePilote" id=""><br>
 
-        <label for="date_fin">Prénom du pilote</label>
-        <input type="date" name="prenomPilote" id=""><br>
-        <?php if (!empty($errorModel)) { echo $errorModel; } ?>
-
-        <input type="text" name="model" id="" placeholder="Modèle souhaité">
-        <?php if (!empty($errorDate)) { echo $errorDate; } ?>
+        <label>Prénom du pilote</label>
+        <input placeholder="Prénom" type="text" name="firstnamePilote" id=""><br>
+        <?php if (!empty($errorname)) { echo $errorfirstname; } ?>
 
         <input type="submit" value="envoie">
     </form>
+
+<?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+        // Envoie a la BDD si pas d'erreur
+            if (empty($errorName) && empty($errorFirstname)){
+            $query = $database->prepare("INSERT INTO plld_pilote(name, surname) VALUES (:namePilote, :firstnamePilote)");
+
+            // Protection contre les injection SQL
+            $query->bindParam(':namePilote', $_POST['namePilote']);
+            $query->bindParam(':firstnamePilote', $_POST['firstnamePilote']);
+
+            $query->execute();
+            header("Location: pageInfo.php");
+        }
+    }
+?>
