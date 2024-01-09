@@ -45,7 +45,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
         Votre réservation à bien été envoyer. <br>
         Nous comfirmerons votre réservation, ainsi que la date la date précise, dans les jour a venir.
     </div>
-    
+    <div id="countdown" class="text-danger">Redirection vers votre profil dans :</div>
     <?php
     /*
         if(!empty($CurrentNum))
@@ -71,4 +71,21 @@ $CurrentNum = $_SESSION['currentAdherent'];
         }
     */
     ?>
+<script>
+var seconds = 10;
+
+function updateCountdown() {
+    document.getElementById('countdown').innerHTML = "Redirection vers votre profil dans : " + seconds + " secondes";
+    seconds--;
+
+    if (seconds < 0) {
+        window.location.href = 'profil.php';
+    } else {
+        setTimeout(updateCountdown, 1000);
+    }
+}
+
+// Appelle la fonction pour la première fois
+updateCountdown();
+</script>
 </body>

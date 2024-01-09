@@ -1,4 +1,6 @@
+
 <?php
+
 session_start();
 $adherent = $_SESSION['currentAdherent'];
 $autorisation = $_SESSION['autorisation'];
@@ -56,11 +58,11 @@ require_once 'PHP/fonction.php';
             echo '<h1 class="sectionTitle"> Vos informations personnelles </h1>';
         echo '<div class="infos_p mx-auto mb-5"">';
         foreach ($rows as $row) {
+            echo "Numéro d'adhérent: " . $row['num'] . "<br>";
             echo "Nom: " . $row['name'] . ' ' . $row['surname'] . "<br>";
             echo "Age: " . $row['age'] . "<br>";
             echo "Numéro de téléphone: " . $row['phone'] . "<br>";
             echo "E-mail: " . $row['mail'] . "<br>";
-            echo "Numéro d'adhérent: " . $row['num'] . "<br>";
             echo "Information complémentaires: " . $row['other'] . "<br>";
             echo "Activité: " . $row['activity'] . "<br>";
             //Ajout d'un bouton pour modifier les informations personnelles
