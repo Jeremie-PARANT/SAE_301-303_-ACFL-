@@ -77,10 +77,10 @@
 
     function numError($num) {
         if (!is_numeric($num)){
-            return "<div class='erreur'> L'age doit être un nombre. </div><br>";
+            return "<div class='erreur'> L'âge doit être un nombre. </div><br>";
         }
         elseif ($num<0){
-            return "<div class='erreur'> Le num ne peut pas être négatif </div><br>";
+            return "<div class='erreur'> Le numéro ne peut pas être négatif </div><br>";
         }
         else{
             return false;

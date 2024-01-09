@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     // Appelle la BDD et de la classe adherent
     require_once 'PHP/database.php';
     $database = new App\Database\database();
@@ -65,8 +66,14 @@
 
                 $query->execute();
 
+                $query2 = $database->prepare("SELECT autorisation FROM plld_adherent WHERE num = :num");
+                $query2->bindParam(':num', $newNum);
+                $query2->execute();
+                $admin = $query2->fetch(PDO::FETCH_ASSOC);
+                $autorisation = $admin['autorisation'];
                 // Sauvegarder nouveau num, pour afficher dans page de remerciement
                 $_SESSION['currentAdherent'] = $newNum;
+                $_SESSION['autorisation'] = $autorisation;
                 header("Location: remerciement.php");
                 
             }

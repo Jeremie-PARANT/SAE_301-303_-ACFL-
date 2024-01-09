@@ -96,7 +96,11 @@ bottom: 4%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
-
+.learnMore:hover{
+    transition-duration:300ms;
+    scale: 1.1;
+    cursor: pointer;
+}
 /* Moyen pédagogique */
 .hvw {
 height: 33vw;
@@ -421,6 +425,8 @@ max-height: 300px;
 .row45 {
 display: flex !important;
 flex-direction: row !important;
+border-radius: 1em;
+font-family: Jomhuria !important;
 
 background-color: #003047;
 color: white;
@@ -428,6 +434,9 @@ color: white;
 .jsp{
     display: grid;
     align-items: center;
+}
+.jsp img{
+    border-radius: 1em;
 }
 .taille{
     font-size: 3em;

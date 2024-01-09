@@ -1,5 +1,6 @@
 <?php
 session_start();
+$autorisation = $_SESSION['autorisation'];
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -26,17 +27,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
     $errorType = (!empty($_POST['typeULM'])) ? typeError($_POST['typeULM']) : "<div class='erreur'> Le type est obligatoire. </div><br>";
 }
-?>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
-        <ul class="navbar-nav navbar-left mb-0" id="main-menu">
-            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.html">Profil</a></li>
-        </ul>
-        <ul class="navbar-nav mb-0">
-            <li class="nav-item navbar-brand"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
-        </ul>
-    </nav>
+
+    //navbar
+    echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+                <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>'; 
+                    if ($autorisation == 1){
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addULM.php">AddULM</a></li>';
+                    }
+                echo '</ul>
+                <ul class="navbar-nav mb-0">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
+                </ul>
+            </nav>';
+            ?>
 
 
     <!-- Formulaire, avec affichage des erreurs -->

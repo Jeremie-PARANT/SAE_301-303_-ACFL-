@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                     if ($autorisation == 1){
                         echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
                         echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addULM.php">AddULM</a></li>';
                     }
                 echo '</ul>
                 <ul class="navbar-nav mb-0">

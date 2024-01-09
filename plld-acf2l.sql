@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 03 jan. 2024 à 17:28
+-- Généré le : mar. 09 jan. 2024 à 21:04
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS `plld_adherent` (
   `age` int DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `other` text,
+  `autorisation` tinyint(1) NOT NULL,
   PRIMARY KEY (`num`)
 ) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb3;
 
@@ -44,9 +45,12 @@ CREATE TABLE IF NOT EXISTS `plld_adherent` (
 -- Déchargement des données de la table `plld_adherent`
 --
 
-INSERT INTO `plld_adherent` (`num`, `name`, `surname`, `mail`, `activity`, `age`, `phone`, `other`) VALUES
-(1, 'PARANT', 'Jérémie', 'jj@gmail.com', 'Maintenance des ULM Moteur<br>', 20, '0606060606', 'J\'ai des lunettes'),
-(2, 'Arno', 'LE MOIL', 'arno@gmail.com', 'Location d’emplacement ULM<br>', 21, '1111111111', 'Unijambiste');
+INSERT INTO `plld_adherent` (`num`, `name`, `surname`, `mail`, `activity`, `age`, `phone`, `other`, `autorisation`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, 1),
+(2, 'LE MOIL', 'Arno', 'arno@gmail.com', 'Cours de pilotage<br>Baptême de l\'air<br>Cours de réparation<br>', 21, '1111111111', 'Clown unijambiste', 0),
+(3, 'DE ABREU', 'Ruben', 'ruru@gmail.com', '<br>Baptême de l\'air<br>', 42, '0656485354', '', 0),
+(4, 'LE NORMAND', 'Morgane', 'airgonomie@gmail.com', '', NULL, '', 'Proffesseur d\'airgonomie', 0),
+(5, 'PARANT', 'Jérémie', 'jj@gmail.com', 'Cours de pilotage<br>Baptême de l\'air<br>', 20, '0606060606', 'J\'ai des lunettes', 0);
 
 -- --------------------------------------------------------
 
@@ -58,16 +62,19 @@ DROP TABLE IF EXISTS `plld_pilote`;
 CREATE TABLE IF NOT EXISTS `plld_pilote` (
   `name` varchar(255) NOT NULL,
   `surname` varchar(255) NOT NULL,
-  `num` int NOT NULL,
+  `num` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`num`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `plld_pilote`
 --
 
 INSERT INTO `plld_pilote` (`name`, `surname`, `num`) VALUES
-('LE MOIL', 'Arno', 1);
+('GUILLARD', 'Glenn', 1),
+('RIMBERT', 'Marius', 2),
+('Besnier', 'Arnault', 3),
+('HANCHON', 'Alexandre', 4);
 
 -- --------------------------------------------------------
 
@@ -90,20 +97,21 @@ CREATE TABLE IF NOT EXISTS `plld_reservation` (
   KEY `fk_reservation_adherent` (`num_adherent`),
   KEY `fk_reservation_pilote` (`num_pilote`),
   KEY `fk_reservation_ulm` (`num_ulm`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `plld_reservation`
 --
 
 INSERT INTO `plld_reservation` (`date_debut`, `date_fin`, `date`, `model`, `status`, `num`, `num_adherent`, `num_pilote`, `num_ulm`) VALUES
-('2024-01-11', '2024-01-02', NULL, '5', 'en attente', 33, 1, NULL, NULL),
-('2024-01-01', '2024-01-10', NULL, 'aaaaaaaaaaaaaaaaaaaaaaaaaaa', 'en attente', 34, 1, NULL, NULL),
-('2024-01-04', '2024-01-05', NULL, '', 'en attente', 35, 1, NULL, NULL),
-('2024-01-11', '2024-01-19', NULL, '', 'en attente', 36, 1, NULL, NULL),
-('2024-01-11', '2024-01-19', NULL, '', 'en attente', 37, 1, NULL, NULL),
-('2024-01-10', '2025-04-26', NULL, '', 'en attente', 38, 1, NULL, NULL),
-('2024-01-18', '2024-01-20', NULL, 'XG-8', 'en attente', 39, 2, NULL, NULL);
+('2024-01-01', '2024-01-10', '2024-01-09', 'Pendulaire', 'accepter', 34, 5, 1, 2),
+('2024-01-15', '2025-04-26', '0000-00-00', 'Pendulaire', 'accepter', 38, 5, 4, 1),
+('2024-01-18', '2024-01-20', NULL, 'Autogire', 'en attente', 39, 2, NULL, NULL),
+('2024-01-19', '2024-05-18', '2024-03-13', 'Pendulaire', 'accepter', 40, 3, 2, 3),
+('2024-05-09', '2024-06-29', NULL, 'Multiaxe', 'en attente', 41, 3, NULL, NULL),
+('2024-01-20', '2024-04-20', NULL, 'Autogire', 'en attente', 42, 4, NULL, NULL),
+('2024-01-12', '2024-01-19', NULL, 'Tetse', 'en attente', 45, 5, NULL, NULL),
+('2024-01-11', '2024-01-19', NULL, 'dazdazd', 'en attente', 46, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -114,16 +122,23 @@ INSERT INTO `plld_reservation` (`date_debut`, `date_fin`, `date`, `model`, `stat
 DROP TABLE IF EXISTS `plld_ulm`;
 CREATE TABLE IF NOT EXISTS `plld_ulm` (
   `type` varchar(255) NOT NULL,
-  `num` int NOT NULL,
+  `num` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`num`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `plld_ulm`
 --
 
 INSERT INTO `plld_ulm` (`type`, `num`) VALUES
-('Avion', 1);
+('Pendulaire', 1),
+('Pendulaire', 2),
+('Pendulaire', 3),
+('Multiaxe', 4),
+('Multiaxe', 5),
+('Multiaxe', 6),
+('Multiaxe', 7),
+('Autogire', 8);
 
 --
 -- Contraintes pour les tables déchargées
