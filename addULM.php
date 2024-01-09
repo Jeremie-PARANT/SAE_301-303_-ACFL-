@@ -1,6 +1,5 @@
 <?php
 session_start();
-$autorisation = $_SESSION['autorisation'];
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -25,38 +24,28 @@ $CurrentNum = $_SESSION['currentAdherent'];
 // Gestions des erreurs
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $errorName = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : "<div class='erreur'> Le nom est obligatoire. </div><br>";
-    $errorFirstname = (!empty($_POST['firstnamePilote'])) ? firstnameError($_POST['firstnamePilote']) : "<div class='erreur'> Le prénom est obligatoire. </div><br>";
+    $errorType = (!empty($_POST['namePilote'])) ? nameError($_POST['namePilote']) : "<div class='erreur'> Le nom est obligatoire. </div><br>";
 }
+?>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+        <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+            <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.html">Profil</a></li>
+        </ul>
+        <ul class="navbar-nav mb-0">
+            <li class="nav-item navbar-brand"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
+        </ul>
+    </nav>
 
-    //navbar
-    echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
-                <ul class="navbar-nav navbar-left mb-0" id="main-menu">
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>'; 
-                    if ($autorisation == 1){
-                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
-                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
-                    }
-                echo '</ul>
-                <ul class="navbar-nav mb-0">
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
-                </ul>
-            </nav>';
-            ?>
 
     <!-- Formulaire, avec affichage des erreurs -->
     <h1 class="mt-5">Ajouter un pilote</h1>
     <div>Veuillez préciser le nom et prénom du pilote</div>
     <form class="reservation" action="addPilote.php" method="post">
-        <label>Nom du pilote</label>
-        <input placeholder="Nom" type="text" name="namePilote" id=""><br>
+        <label>Type de l'ULM</label>
+        <input placeholder="Type" type="text" name="typeULM" id=""><br>
         <?php if (!empty($errorName)) { echo $errorName; } ?>
-
-        <label>Prénom du pilote</label>
-        <input placeholder="Prénom" type="text" name="firstnamePilote" id=""><br>
-        <?php if (!empty($errorFirstname)) { echo $errorFirstname; } ?>
 
         <input type="submit" value="envoie">
     </form>
