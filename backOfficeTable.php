@@ -1,4 +1,6 @@
 <?php
+session_start();
+$autorisation = $_SESSION['autorisation'];
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -39,17 +41,21 @@ require_once 'PHP/fonction.php';
         // Nav bar
         echo '<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
                 <ul class="navbar-nav navbar-left mb-0" id="main-menu">
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="#home">Accueil</a></li>
-                </ul>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="profil.php">Profil</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="reservation.php">Réserver</a></li>'; 
+                    if ($autorisation == 1){
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="backOfficeTable.php">BackOffice</a></li>';
+                        echo '<li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="addPilote.php">AddPilote</a></li>';
+                    }
+                echo '</ul>
                 <ul class="navbar-nav mb-0">
-                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="formulaire.php">Inscription</a></li>
-                    <li class="nav-item navbar-brand"><a class="navLink2" href="connexion.php">Connexion</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="PHP/deconnecter.php">Se déconnecter</a></li>
                 </ul>
-            </nav><br><br><br>';
+            </nav>';
 
 
         // Affiche le tableau des réservations
-        echo "<h1 class='sectionTitle'>Réservation</h1>
+        echo "<h1 class='sectionTitle reserv'>Réservation</h1>
         <input type='text' id='reservationSearch' onkeyup=\"search('reservationSearch', 'reservationTable')\" placeholder='recherche'>
         <table id='reservationTable'>
         <th onclick=\"sortTable(0, 'reservationTable')\"><div>Adhérent<div></th><th onclick=\"sortTable(1, 'reservationTable')\"><div>Date début<div></th><th onclick=\"sortTable(2, 'reservationTable')\"><div>Date Fin<div></th><th onclick=\"sortTable(3, 'reservationTable')\"><div>Status<div></th><th onclick=\"sortTable(4, 'reservationTable')\"><div>Numéro de réservation<div></th><th onclick=\"sortTable(5, 'reservationTable')\"><div>Détails</th>";
