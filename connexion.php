@@ -61,7 +61,7 @@ require_once 'PHP/adherent.php';
 
 
 <div class="margint">
-    <h2 class="text-center">Identifiants :</h2>
+    <h1 class="text-center">Identifiants :</h1>
     <form action="connexion.php" method="post" class="login d-flex flex-column align-items-center">
         <input type="text" name="num" id="" placeholder="Numéro d'adhérent *">
         <input type="text" name="mail" id="" placeholder="Adresse e-mail *">
