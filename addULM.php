@@ -15,6 +15,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation</title>
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="Styles/reservation.css">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="Styles/formulaire.css" rel="stylesheet" type="text/css" media="all">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -48,16 +49,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
 
     <!-- Formulaire, avec affichage des erreurs -->
-    <h1 class="mt-5">Ajouter un ULM</h1>
-    <div>Veuillez préciser le type de l'ULM</div>
+    <h1 class="couleur-titre">Ajouter un ULM</h1>
+    <div class="backgroundcolor2 mx-auto text-center p-3 w-50 p-3 ">
+    <div class="mb-3">Veuillez préciser le type de l'ULM</div>
     <form class="reservation" action="addULM.php" method="post">
-        <label>Type de l'ULM</label>
+        <label class="mb-4">Type de l'ULM</label>
         <input placeholder="Type" type="text" name="typeULM" id=""><br>
         <?php if (!empty($errorType)) { echo $errorType; } ?>
 
         <input type="submit" value="envoi">
     </form>
-
+    </div>
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
