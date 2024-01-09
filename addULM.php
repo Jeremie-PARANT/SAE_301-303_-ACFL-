@@ -61,15 +61,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
-        // Envoie a la BDD si pas d'erreur
-            if (empty($errorType)){
-            $query = $database->prepare("INSERT INTO plld_ulm(type) VALUES (:typeULM)");
+    // Envoie a la BDD si pas d'erreur
+        /*if (empty($errorType)){*/
+        $query = $database->prepare("INSERT INTO plld_ulm(type) VALUES (:typeULM)");
 
-            // Protection contre les injection SQL
-            $query->bindParam(':typeULM', $_POST['typeULM']);
+        // Protection contre les injection SQL
+        $query->bindParam(':typeULM', $_POST['typeULM']);
 
-            $query->execute();
-            echo "<br><p>L'ULM a bien été ajouté</p><br>";
-        }
+        $query->execute();
+        echo "<br><p>L'ULM a bien été ajouté</p><br>";
+        /*}*/
     }
 ?>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/addPilote.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation</title>
+    <link href="./Réservation_files/index.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="./Réservation_files/reservation.css">
+    <link href="./Réservation_files/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./Réservation_files/formulaire.css" rel="stylesheet" type="text/css" media="all">
+    <script src="./Réservation_files/bootstrap.bundle.min.js.téléchargement" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./Réservation_files/jquery.min.js.téléchargement"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light backgroundDarkBlue fixed-top" id="main-navbar">
+                <ul class="navbar-nav navbar-left mb-0" id="main-menu">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/profil.php">Profil</a></li>
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/reservation.php">Réserver</a></li><li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/backOfficeTable.php">BackOffice</a></li><li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/addPilote.php">AddPilote</a></li><li class="nav-item navbar-brand mr-4"><a class="navLink ml-2" href="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/addULM.php">AddULM</a></li></ul>
+                <ul class="navbar-nav mb-0">
+                    <li class="nav-item navbar-brand mr-4"><a class="navLink2" href="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/PHP/deconnecter.php">Se déconnecter</a></li>
+                </ul>
+            </nav>
+    <!-- Formulaire, avec affichage des erreurs -->
+    <h1 class="couleur-titre">Ajouter un pilote :</h1>
+
+    <div class="backgroundcolor2 mx-auto text-center p-3 w-50">
+    <div class="mb-3">Veuillez préciser le nom et prénom du pilote</div>
+    <form class="reservation" action="http://localhost/MMI2/SAE301/SAE_301-303_-ACFL-/addPilote.php" method="post">
+        <label class="mb-3">Nom du pilote</label>
+        <input placeholder="Nom" type="text" name="namePilote" id=""><br>
+        <div class="erreur"> Le nom est obligatoire. </div><br>
+        <label class="mb-4">Prénom du pilote</label>
+        <input placeholder="Prénom" type="text" name="firstnamePilote" id=""><br>
+        <div class="erreur"> Le prénom est obligatoire. </div><br>
+        <input type="submit" value="envoie">
+    </form>
+    </div>
+</body></html>

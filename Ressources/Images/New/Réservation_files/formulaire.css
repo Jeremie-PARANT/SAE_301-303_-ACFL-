@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inscriptionAdherant {
+    margin: auto;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: auto !important;
+}
+
+input{
+    height: 40px;
+}
+
+label{
+    margin: 0 !important;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.form{
+    background-color: #003047;
+    color: white;
+    width: 90%;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.erreur {
+    color: red;
+}
+
+.bouton43{
+    background-color: white !important;
+    border: 2px solid black !important;
+    border-radius: 1em;
+    margin-top: 2vw;
+}
+
+.bouton43 a{
+    text-decoration: none !important;
+    color: #003047 !important;
+
+}
+
+.aucentre{
+    margin: 5vw auto 0 auto;
+    line-height: 1.7vw;
+    padding: 5vw;
+    background-color: #003047;
+    color: white;
+    width: 800px;
+    border-radius: 1em;
+}
+
+.mail{
+    width: 95%;
+}
+
+.other{
+    width: 96%;
+    height: 120px;
+}
+
+.login{
+    margin-left: auto;
+}
+
+.margint{
+    margin-top: 10vw !important;
+    width: 60vw;
+    margin: auto;
+    background-color: #003047;
+    border-radius: 1em;
+    padding: 3vw 0;
+}
+
+.backgroundcolor2{
+    background-color: #003047;
+    color: white;
+    border-radius: 1em;
+}
