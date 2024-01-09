@@ -75,20 +75,20 @@ class adherent {
 
     public static function mailError($mail) {
         if (empty($mail)){
-            return "<br><div class='erreur'> Le email est obligatoire. </div>";
+            return "<br><div class='erreur'> Le e-mail est obligatoire. </div>";
         }
         elseif (!is_string($mail)){
-            return "<br><div class='erreur'> Le email doit être une chaîne de caractères. </div>";
+            return "<br><div class='erreur'> Le e-mail doit être une chaîne de caractères. </div>";
         }
         elseif (strlen($mail)<2){
-            return "<br><div class='erreur'> Votre email est trop courte </div>";
+            return "<br><div class='erreur'> Votre e-mail est trop courte </div>";
         }
         elseif (strlen($mail)>100){
-            return "<br><div class='erreur'> Votre email est trop longue </div>";
+            return "<br><div class='erreur'> Votre e-mail est trop longue </div>";
         }
 
         elseif (filter_var($mail, FILTER_VALIDATE_EMAIL)==false) {
-            return "<br><div class='erreur'> Email invalide </div>";
+            return "<br><div class='erreur'> E-mail invalide </div>";
         }
         else{
             return false;
@@ -97,13 +97,13 @@ class adherent {
 
     public static function ageError($age) {
         if (!is_numeric($age)){
-            return "<br><div class='erreur'> L'age doit être un nombre. </div>";
+            return "<br><div class='erreur'> L'âge doit être un nombre. </div>";
         }
         elseif ($age>200){
             return "<br><div class='erreur'> Vous ne pouvez pas avoir 200 ans </div>";
         }
         elseif ($age<0){
-            return "<br><div class='erreur'> Vous ne pouvez pas avoir un age négatif </div>";
+            return "<br><div class='erreur'> Vous ne pouvez pas avoir un âge négatif </div>";
         }
         else{
             return false;
@@ -116,10 +116,10 @@ class adherent {
             return "<br><div class='erreur'> Le numéro de téléphone doit être une chaine de charactère. </div>";
         }
         elseif (strlen($phone) != 10){
-            return "<br><div class='erreur'> Le numéro de téléphone doit contenir 10 chiffre (attention au espace) </div>";
+            return "<br><div class='erreur'> Le numéro de téléphone doit contenir 10 chiffre (attention aux espaces) </div>";
         }
         elseif (!preg_match('/^[0-9]+$/', $phone)){
-            return "<br><div class='erreur'> Le numéro de téléphone uniquement contenir des chiffre </div>";
+            return "<br><div class='erreur'> Le numéro de téléphone doit uniquement contenir des chiffres </div>";
         }
         else{
             return false;
@@ -128,10 +128,10 @@ class adherent {
 
     public static function otherError($other) {
         if (!is_string($other)){
-            return "<br><div class='erreur'> Les informations complémentaire doivent être une chaine de charactère </div>";
+            return "<br><div class='erreur'> Les informations complémentaire doivent être une chaine de caractère </div>";
         }
         elseif (strlen($other)>1000){
-            return "<br><div class='erreur'> Les informations complémentaires ne doivent pas dépasser les 1000 charactères </div>";
+            return "<br><div class='erreur'> Les informations complémentaires ne doivent pas dépasser les 1000 caractères </div>";
         }
         else{
             return false;
