@@ -31,7 +31,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
 // Gestions des erreurs
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $errorType = (!empty($_POST['typeULM'])) ? typeError($_POST['typeULM']) : "<div class='erreur'> Le type est obligatoire. </div><br>";
+    $errorType = (!empty($_POST['typeULM'])) ? typeError($_POST['typeULM']) : "<div> Le type est obligatoire. </div><br>";
 }
 
 

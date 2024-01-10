@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $query->bindParam(':firstnamePilote', $_POST['firstnamePilote']);
 
             $query->execute();
-            echo "<br><p class='text-danger text-center'>Le pilote a bien été ajouté</p><br>";
+            echo "<br><p class='text-center'>Le pilote a bien été ajouté</p><br>";
         }
     }
 ?>
