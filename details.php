@@ -160,7 +160,7 @@ $envoyer = '';
                     $query->bindParam(':reservationNum', $num, PDO::PARAM_INT);
 
                     $query->execute();
-                    $envoyer = "<div class='reussie'> La modification a bien été éffectuer  </div>";
+                    $envoyer = "<div class='reussie'> La modification à bien été éffectué </div>";
                     if (!empty($envoyer)) {echo $envoyer;}
                 }
             }
