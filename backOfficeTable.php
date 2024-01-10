@@ -6,7 +6,7 @@ require_once 'PHP/database.php';
 $database = new App\Database\database();
 require_once 'PHP/fonction.php';
 if (empty($autorisation)) {
-    // Redirect to the login page
+// Redirection vers la page connexion
     header("Location: connexion.php");
     exit();
 }

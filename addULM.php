@@ -2,7 +2,7 @@
 session_start();
 $autorisation = $_SESSION['autorisation'];
 if (empty($autorisation)) {
-    // Redirect to the login page
+// Redirection vers la page connexion
     header("Location: connexion.php");
     exit();
 }
