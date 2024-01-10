@@ -64,7 +64,7 @@ if (empty($autorisation)) {
 
         // Affiche le tableau des réservations
         echo "<h1 class='sectionTitle reserv'>Réservation</h1>
-        <input type='text' id='reservationSearch' onkeyup=\"search('reservationSearch', 'reservationTable')\" placeholder='recherche'>
+        <input type='text' id='reservationSearch' onkeyup=\"search('reservationSearch', 'reservationTable')\" placeholder='Recherche'>
         <table id='reservationTable'>
         <th onclick=\"sortTable(0, 'reservationTable')\"><div>Adhérent<div></th><th onclick=\"sortTable(1, 'reservationTable')\"><div>Date début<div></th><th onclick=\"sortTable(2, 'reservationTable')\"><div>Date Fin<div></th><th onclick=\"sortTable(3, 'reservationTable')\"><div>Status<div></th><th onclick=\"sortTable(4, 'reservationTable')\"><div>Numéro de réservation<div></th><th onclick=\"sortTable(5, 'reservationTable')\"><div>Détails</th>";
         foreach ($reservations as $reservation)
@@ -75,7 +75,7 @@ if (empty($autorisation)) {
 
         // Affiche le tableau des adhérents
         echo "<h1 class='sectionTitle'>Adherent</h1>
-        <input type='text' id='adherentSearch' onkeyup=\"search('adherentSearch', 'adherentTable')\" placeholder='recherche'>
+        <input type='text' id='adherentSearch' onkeyup=\"search('adherentSearch', 'adherentTable')\" placeholder=Recherche'>
         <table id='adherentTable'>
         <th onclick=\"sortTable(0, 'adherentTable')\"><div>Nom<div></th><th onclick=\"sortTable(1, 'adherentTable')\"><div>Mail<div></th><th onclick=\"sortTable(2, 'adherentTable')\"><div>Activité<div></th><th onclick=\"sortTable(3, 'adherentTable')\"><div>Age<div></th><th onclick=\"sortTable(4, 'adherentTable')\"><div>Numéro de téléphone<div></th><th onclick=\"sortTable(4, 'adherentTable')\"><div>Numéro d'identification</th>";
         foreach ($adherents as $adherent)
@@ -86,7 +86,7 @@ if (empty($autorisation)) {
 
         // Affiche le tableau des pilotes
         echo "<h1 class='sectionTitle'>Pilote</h1>
-        <input type='text' id='piloteSearch' onkeyup=\"search('piloteSearch', 'piloteTable')\" placeholder='recherche'>
+        <input type='text' id='piloteSearch' onkeyup=\"search('piloteSearch', 'piloteTable')\" placeholder='Recherche'>
         <table id='piloteTable'>
         <th onclick=\"sortTable(0, 'piloteTable')\"><div>Nom<div></th><th onclick=\"sortTable(1, 'piloteTable')\"><div>Numéro du pilote</th>";
         foreach ($pilotes as $pilote)
@@ -97,9 +97,9 @@ if (empty($autorisation)) {
 
         // Affiche le tableau des ULM
         echo "<h1 class='sectionTitle'>ULM</h1>
-        <input type='text' id='ulmSearch' onkeyup=\"search('ulmSearch', 'ulmTable')\" placeholder='recherche'>
+        <input type='text' id='ulmSearch' onkeyup=\"search('ulmSearch', 'ulmTable')\" placeholder='Recherche'>
         <table id='ulmTable'>
-        <th onclick=\"sortTable(0, 'ulmTable')\"><div>Modèle<div></th><th onclick=\"sortTable(1, 'ulmTable')\"><div>Numéro du ulm</th>";
+        <th onclick=\"sortTable(0, 'ulmTable')\"><div>Modèle<div></th><th onclick=\"sortTable(1, 'ulmTable')\"><div>Numéro de l'ULM</th>";
         foreach ($ulms as $ulm)
         {
             echo "<tr><td>" . htmlspecialchars("{$ulm['type']}") . "</td><td>" . htmlspecialchars("{$ulm['num']}") . "</td></tr>";

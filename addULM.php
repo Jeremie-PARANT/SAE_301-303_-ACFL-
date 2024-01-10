@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         <input placeholder="Type" type="text" name="typeULM" id=""><br>
         <?php if (!empty($errorType)) { echo $errorType; } ?>
 
-        <input type="submit" value="envoi">
+        <input type="submit" value="Envoyer">
     </form>
     </div>
 <?php

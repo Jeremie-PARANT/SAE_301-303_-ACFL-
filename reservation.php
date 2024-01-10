@@ -6,6 +6,11 @@ require_once 'PHP/database.php';
 $database = new App\Database\database();
 require_once 'PHP/fonction.php';
 $CurrentNum = $_SESSION['currentAdherent'];
+if (empty($CurrentNum)) {
+    // Redirection vers la page connexion
+        header("Location: connexion.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     <!-- Formulaire, avec affichage des erreurs -->
 
-    <div class="mb-3">Veuillez préciser un interval de date de disponibilité :</div>
+    <div class="mb-3">Veuillez préciser un intervalle de date de disponibilité :</div>
     <form class="reservation" action="reservation.php" method="post">
         <label class="mb-3" for="date_debut">Date de début *</label>
         <input type="date" name="date_debut" id=""><br>
@@ -68,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         <input class="mb-4" type="text" name="model" id="" placeholder="Modèle souhaité">
         <?php if (!empty($errorDate)) { echo $errorDate; } ?>
         <br>
-        <input class="d-block mx-auto" type="submit" value="envoie">
+        <input class="d-block mx-auto" type="submit" value="Envoyer">
     </form>
 </div>
 

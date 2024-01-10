@@ -148,14 +148,14 @@
                     <div class="flex-column">
                         <div class="px-4 d-flex align-items-center">
                             <div class="px-3 flex-column">
-                                <h2>Activité</h2>
+                                <h2>Activités</h2>
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="pilotage" />
                                     <label class="px-2" for="scales">Cours de Pilotage</label>
                                 </div>
                                 <div class="checkbox">
                                     <input type="checkbox" id="" name="bapteme" />
-                                    <label class="px-2" for="scales">baptême de l’air</label>
+                                    <label class="px-2" for="scales">Baptême de l’air</label>
                                 </div>
                             </div>
                             <div class="flex-column">

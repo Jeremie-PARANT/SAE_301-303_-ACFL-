@@ -5,8 +5,13 @@
     require_once 'PHP/database.php';
     $database = new App\Database\database();
     require_once 'PHP/adherent.php';
-    if (!empty($_SESSION['currentAdherent'])){$currentAdherent = $_SESSION['currentAdherent'];}
-    
+    $CurrentNum = $_SESSION['currentAdherent'];
+    if (empty($CurrentNum)) {
+        // Redirection vers la page connexion
+            header("Location: connexion.php");
+            exit();
+        }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
