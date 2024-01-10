@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACFL</title>
-
+    <script src="Script/index.js"></script>
 
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -401,30 +401,23 @@
     <section id="contact" class="backgroundDarkBlue pt-5 px-5">
         <div class="row">
             <div class="col-5 text-center textWhite pl-5">
-                <h3 class="contactTitle">Information</h3>
-                <div>acf21@gmail.com</div>
-                <div>+33 01 60 56 60 60</div>
-                <div>62, Avenue de la République, 70200 Lures</div>
-                <div class="d-flex justify-content-center mt-3">
-                    <img class="logoI fitCover" src="Ressources/Images/linkedinWhite.png" alt="">
-                    <img class="logoI fitCover" src="Ressources/Images/facebookWhite.png" alt="">
-                    <img class="logoI fitCover" src="Ressources/Images/instagramWhite.png" alt="">
-                </div>
+                <!-- ... (Vos informations de contact) ... -->
             </div>
-
+    
             <div class="col-7 text-center textWhite pr-5">
                 <h3 class="contactTitle m-0">Contacter nous !</h3>
                 <div>Laissez votre message, nous vous contacterons dans la semaine</div>
-                    <div class="mt-4 mb-2">
-                        <input class="inputMarginR" type="text" placeholder="Nom">
-                        <input class="inputMarginL" type="text" placeholder="Prenom">
-                    </div>
-                    <input class="doubleInput my-2" type="email" placeholder="Email"><br>
-                    <textarea class="doubleInput BigInput my-2" name="" id="" cols="30" rows="10"></textarea><br>
-                    <input class="submitInput mt-3 mb-1" type="submit" value="Envoyer" onclick="startAnimation('animationVideo2')">
+                <div class="mt-4 mb-2">
+                    <input id="firstName" class="inputMarginR" type="text" placeholder="Nom">
+                    <input id="lastName" class="inputMarginL" type="text" placeholder="Prénom">
+                </div>
+                <input id="email" class="doubleInput my-2" type="email" placeholder="Email"><br>
+                <textarea id="message" class="doubleInput BigInput my-2" name="" id="" cols="30" rows="10"></textarea><br>
+                <input class="submitInput mt-3 mb-1" type="submit" value="Envoyer" onclick="submitForm()">
             </div>
         </div>
     </section>
+    
 
     
     <!-- Footer -->
@@ -440,7 +433,7 @@
     </footer>
 
 
-    <script src="Script/index.js"></script>
+    
     <script src="Script/ruben.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

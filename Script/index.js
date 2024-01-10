@@ -1,3 +1,38 @@
+function submitForm() {
+    // Démarrer ou redémarrer l'animation
+    startAnimation('animationVideo2');
+
+    // Obtenir les données du formulaire
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    // Valider les données du formulaire (vous pouvez ajouter plus de validation si nécessaire)
+
+    // Envoyer les données au serveur en utilisant AJAX
+    var xhr = new XMLHttpRequest();
+    var formData = new FormData();
+    formData.append('firstName', firstName);
+    formData.append('lastName', lastName);
+    formData.append('email', email);
+    formData.append('message', message);
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                // Gérer la réponse, si nécessaire
+                alert('Message envoyé avec succès !');
+            } else {
+                // Gérer l'erreur, si nécessaire
+                alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+            }
+        }
+    };
+
+    xhr.open('POST', 'send_contact_form.php', true);
+    xhr.send(formData);
+}
 
 function startAnimation(videoId) {
     var animationVideo = document.getElementById(videoId);
@@ -10,9 +45,12 @@ function startAnimation(videoId) {
 
     animationVideo.addEventListener('ended', function () {
         animationVideo.currentTime = 0;
-        animationVideo.pause();
+        animationVideo.play(); // Redémarrer l'animation après sa fin
     });
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var animationVideo = document.getElementById('animationVideo');
