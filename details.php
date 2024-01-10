@@ -151,7 +151,7 @@ $envoyer = '';
                 // Envoie a la BDD si pas d'erreur
                 if (empty($errorNum_pilote) && empty($errorNum_ulm) && empty($errorDate))
                 {
-                    $query = $database->prepare("UPDATE plld_reservation SET date = :date, num_ulm = :num_ulm, num_pilote = :num_pilote, status = 'accepter' WHERE num = :reservationNum");
+                    $query = $database->prepare("UPDATE plld_reservation SET date = :date, num_ulm = :num_ulm, num_pilote = :num_pilote, status = 'accepté' WHERE num = :reservationNum");
 
                     // Protection contre les injection SQL
                     $query->bindParam(':date', $_POST['date']);
