@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $query->bindParam(':typeULM', $_POST['typeULM']);
 
         $query->execute();
-        echo "<br><p class='text-danger text-center'>L'ULM a bien été ajouté</p><br>";
+        echo "<br><p class='text-center'>L'ULM a bien été ajouté</p><br>";
         /*}*/
     }
 ?>

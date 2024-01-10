@@ -1,6 +1,11 @@
 <?php
 session_start();
 $autorisation = $_SESSION['autorisation'];
+if (empty($autorisation)) {
+    // Redirection vers la page connexion
+        header("Location: connexion.php");
+        exit();
+    }
 // Appelle la BDD et de la classe adherent
 require_once 'PHP/database.php';
 $database = new App\Database\database();
@@ -77,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $query->bindParam(':firstnamePilote', $_POST['firstnamePilote']);
 
             $query->execute();
-            echo "<br><p class='text-danger text-center'>Le pilote a bien été ajouté</p><br>";
+            echo "<br><p class='text-center'>Le pilote a bien été ajouté</p><br>";
         }
     }
 ?>
