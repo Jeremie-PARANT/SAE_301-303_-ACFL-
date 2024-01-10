@@ -31,7 +31,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
 // Gestions des erreurs
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $errorType = (!empty($_POST['typeULM'])) ? typeError($_POST['typeULM']) : "<div> Le type est obligatoire. </div><br>";
+    $errorType = (!empty($_POST['typeULM'])) ? typeError($_POST['typeULM']) : "<div class='erreur'> Le type est obligatoire. </div><br>";
 }
 
 
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $query->bindParam(':typeULM', $_POST['typeULM']);
 
         $query->execute();
-        echo "<br><p class='text-danger text-center'>L'ULM a bien été ajouté</p><br>";
+        echo "<br><p class='text-center'>L'ULM a bien été ajouté</p><br>";
         /*}*/
     }
 ?>
