@@ -44,7 +44,7 @@ $CurrentNum = $_SESSION['currentAdherent'];
     <h1 class="sectionTitle">Page d'information</h1>
     <div>
         Votre réservation à bien été envoyer. <br>
-        Nous comfirmerons votre réservation, ainsi que la date la date précise, dans les jour a venir.
+        Nous comfirmerons votre réservation, ainsi que la date la date précise, dans les jours à venir.
     </div>
     <div id="countdown" class="text-danger">Redirection vers votre profil dans :</div>
     <?php

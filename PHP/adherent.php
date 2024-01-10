@@ -99,6 +99,9 @@ class adherent {
         if (!is_numeric($age)){
             return "<br><div class='erreur'> L'âge doit être un nombre. </div>";
         }
+        elseif ($age < 18){
+            return "Vous devez être majeur pour vous inscrire !";
+        }
         elseif ($age>200){
             return "<br><div class='erreur'> Vous ne pouvez pas avoir 200 ans </div>";
         }
