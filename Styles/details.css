@@ -1,0 +1,31 @@
+body {
+margin: 0;
+text-align: center !important;
+display: inline;
+}
+
+.backgroundcolor3{
+background-color: #003047;
+padding: 1em;
+width: 55vw;
+margin: auto;
+color: white;
+border-radius: 1em;
+}
+.back-link {
+    position: absolute;
+    left: 10vw;
+    display: inline-block;
+    margin-top: 6em;
+    padding: 10px;
+    background-color: #5279A2; /* Couleur de fond de la flèche */
+    color: #fff; /* Couleur du texte de la flèche */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px; /* Ajustez selon vos besoins */
+}
+
+.back-link:hover {
+    background-color: #003047; /* Couleur de fond de la flèche au survol */
+}

@@ -1,0 +1,13 @@
+.backgroundcolor2{
+    background-color: #003047 !important;
+    padding: 2vw;
+    color: white;
+    border-radius: 1em;
+}
+
+.couleur-titre{
+    color: #003047;
+    margin-top: 9vw;
+    text-decoration: underline;
+    margin-left: 20vw;
+}

@@ -29,10 +29,6 @@ transition-duration: 100ms;
 border-bottom: 0.2vw solid #ffffff;
 color: white !important;
 }
-nav{
-    backdrop-filter: blur(1000px);
-    opacity: 98%;
-}
 
 /* Accueil */
 #accueil {

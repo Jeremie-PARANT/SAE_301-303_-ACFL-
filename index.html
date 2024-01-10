@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACFL</title>
-
+    <script src="Script/index.js"></script>
 
     <link href="Styles/index.css" rel="stylesheet" type="text/css" media="all">
     <link href="Styles/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
+
+
 <body>
 
     <!--Cookies-->
@@ -51,10 +53,10 @@
             <video id="animationVideo" loop muted playsinline class="animationVideo animationVideo1">
                 <source src="Ressources/Animation/Composition_1_1.mp4" type="video/mp4">
             </video>
-            <div class="position-absolute planeButton planeButton1" onclick="startAnimation('animationVideo')">FLY !!!</div>
+            
 
             <div class="container-fluid p-0">
-                <p class="text-justify text-center">Bienvenu(e) dans notre association <br> Aéro-club de Frotey-Les-Lures </p>
+                <p class="text-justify text-center">Bienvenue dans notre association <br> Aéro-club de Frotey-Les-Mures </p>
             </div>
             <div class="container">
                 <a data-scroll href="">
@@ -73,19 +75,19 @@
     <section id="activities" class="pt-5">
         <div class="d-flex">
             <div class="pl-5"><h1 class="sectionTitle mb-2">Activité</h1>
-                <h2 class="sectionSubTitle"><b class="giantT">L</b> ’aéro-club assure la formation de pilotes et d’instructeurs. <br> Et propose également des baptêmes de l’air.</h2>
+                <h2 class="sectionSubTitle"><b class="giantT">L</b> ’aéro-club assure la formation de pilotes et d’instructeurs, et propose également des baptêmes de l’air.</h2>
                 <p class="pr-5">L’aéro-club est une Association Loi 1901, agréée Jeunesse et Sports , adhérente à la FFULM ( Fédération Française d’ULM).
                     Association enregistrée n°04674 - - Agrément n° AS70986858 Le siège social demeure 62, Avenue de la République, 70200 Lure </p>
             </div>
             <img class="rounded-circle roundImg" src="Ressources/Images/old/pendulaire.jpg" alt="pendulaire">
         </div>
-        <h3 class="text-center mt-5 mb-4 subTitleBig">l’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</h3>
+        <h3 class="text-center mt-5 mb-4 subTitleBig">L’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</h3>
         <div>
             <div class="d-flex justify-content-around mb-4 mx-5">
                 <div class="text-center prestComp">
                     <img src="Ressources/Images/actiMaintenance.png" class="ActiviteImage"></img>
-                    <h3 class="subTitle mt-3">Maintenance des ULM Moteur</h3>
-                    <div class="mb-5">Lors de nos formations, nous proposons d'effectuer des maintenance concernant les ULM moteurs, les structures ...</div>
+                    <h3 class="subTitle mt-3">Maintenance des ULM moteur</h3>
+                    <div class="mb-5">Lors de nos formations, nous proposons d'effectuer des maintenances concernant les ULM moteurs, les structures ...</div>
                     <br><div class="learnMore">Learn More</div>
                 </div>
                 <div class="text-center prestComp">
@@ -128,19 +130,19 @@
         <section>
             <h1 class="ml-5 mt-5 sectionTitle">Catégorie d’ULM</h1>
             <div class="px-5 pt-2">
-                <p class="text">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie  dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent"</p>
+                <p class="text">Il existe 6 classes d’ULM : Le paramoteur, le pendulaire, le multiaxe, l’autogire ultraléger, l’aérostat ultraléger et l’hélicoptère ultraléger.</p>
             </div>
             <div class="pl-5 pt-2">
-                <h2 class="sectionSubTitle"><b class="giantT">Q</b>orem sit amet, consectetur adipiscing elit.</h2>
+                <h2 class="sectionSubTitle"><b class="giantT">L</b>'association possède 3 types d'ULM</h2>
             </div>
             <div class="px-5 mx-5 pb-5 text-center d-flex justify-content-around">
                 <div class="ulmCard">
-                    <img id="ulmCardPhoto" src="Ressources/Images/old/course-12.jpg">
+                    <img class="ulmCardPhoto" src="Ressources/Images/new/pendulaire.jpg">
                     <div class="pt-3 cardBottom">
                         <div class="pl-2 cardBottomTitle">
-                            <p class="p-1 pr-4 textSmall">Paly House & Nursary</p>
+                            <p class="p-1 pr-4 textSmall">Pendulaire</p>
                         </div>
-                        <p class="px-3 py-1 textSmall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec.</p>
+                        <p class="px-3 py-1 textSmall">Un ULM pendulaire est un aéronef sustenté par une voilure rigide sous laquelle est généralement accroché un chariot motorisé.</p>
                         <hr class="alert-secondary hr ">
                         <div class="pb-3 px-4 spaceBetween d-flex">
                             <button type="button" class="px-3 py-0 btn btn-default buttonCustom">Submit</button>
@@ -149,12 +151,12 @@
                     </div>
                 </div>
                 <div class="ulmCard">
-                    <img id="ulmCardPhoto" src="Ressources/Images/old/course-12.jpg">
+                    <img class="ulmCardPhoto" src="Ressources/Images/new/multiaxe.jpg">
                     <div class="pt-3 cardBottom">
                         <div class="pl-2 cardBottomTitle">
-                            <p class="p-1 pr-4 textSmall">Paly House & Nursary</p>
+                            <p class="p-1 pr-4 textSmall">Multiaxe</p>
                         </div>
-                        <p class="px-3 py-1 textSmall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec.</p>
+                        <p class="px-3 py-1 textSmall">Le terme "multiaxe" désigne le plus souvent un avion ULM de la Classe 3 dite "multiaxe". Autrement, c'est un adjectif qui veut simplement dire: "qui comporte plusieurs axes".</p>
                         <hr class="alert-secondary hr ">
                         <div class="pb-3 px-4 spaceBetween d-flex">
                             <button type="button" class="px-3 py-0 btn btn-default buttonCustom">Submit</button>
@@ -163,14 +165,15 @@
                     </div>
                 </div>
                 <div class="ulmCard">
-                    <img id="ulmCardPhoto" src="Ressources/Images/old/course-12.jpg">
+                    <img class="ulmCardPhoto" src="Ressources/Images/new/autogire.jpg">
                     <div class="pt-3 cardBottom">
                         <div class="pl-2 cardBottomTitle">
-                            <p class="p-1 pr-4 text textSmall">Paly House & Nursary</p>
+                            <p class="p-1 pr-4 text textSmall">Autogire</p>
                         </div>
-                        <p class="px-3 py-1 text textSmall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec.</p>
+                        <p class="px-3 py-1 text textSmall">L'autogire (parfois écrit autogyre) est un aéronef dont une voilure tournante libre assure la sustentation, mais dont la propulsion est assurée par une hélice entraînée par un moteur.
+                            .</p>
                         <hr class="alert-secondary hr">
-                        <div class="pb-3 px-4 spaceBetween d-flex">
+                        <div class="bottom pb-3 px-4 spaceBetween d-flex">
                             <button type="button" class="px-3 py-0 btn btn-default buttonCustom">Submit</button>
                             <p class="m-0 prixCustom">79,98€</p>
                         </div>  
@@ -187,7 +190,7 @@
         <div class="barYellow topMid"></div>
         <h1 class="sectionTitle ml-5 mb-4">Moyens pedagogiques</h1>
         <p class="ml-5">Un aérodrome privé avec la possibilité d'un hébergement dans un environnement exceptionnel</p>
-        <p class="ml-4">Sur le site, nous disposons, d'une surface totale de 45 hectares dégagés, de deux pistes en X de 800 et 450 m, un hydrosurface de 8 hectares, trois hangars avec surface couverte de 4300 m², des locaux administratifs informatisés, une salle de cours multimédia avec simulateur de vol, un atelier d'entretien et de réparation, des capacités d'accueil et de restauration sur place, une connexion WIFI gratuit sur toute la base</p>
+        <p class="ml-4">Sur le site, nous disposons, d'une surface totale de 45 hectares dégagés, de deux pistes en X de 800 et 450 m, une hydrosurface de 8 hectares, trois hangars avec surface couverte de 4300 m², des locaux administratifs informatisés, une salle de cours multimédia avec simulateur de vol, un atelier d'entretien et de réparation, des capacités d'accueil et de restauration sur place, une connexion WI-FI gratuite sur toute la base</p>
         <img class="w-100 my-4 hvw fitCover" src="Ressources/Images/old/b.jpg" alt="avions">
         <div class="barYellow botMid"></div>
     </section>
@@ -196,36 +199,36 @@
 
     <!-- Evenement -->
     <section id="events" class="pt-3">
-        <div class="pl-5"><h1 class="sectionTitle mb-5">Evenements</h1>
-            <container>
-              <div class="row45">
-                  <div class="column">
+        <div><h1 class="sectionTitle mb-5">Evenements</h1></div>
+            <container >
+              <div class="row45 w-75 mx-auto">
+                  <div class="column jsp">
                       <img src="Ressources/gallery/event-1.png" alt="Expo 2023">
                   </div>
-                  <div class="column">
-                      <h2>France air expo 2023</h2>
-                      <p>9:00 AM to 18:00 PM</p>
+                  <div class="column jsp">
+                      <h2 class="taille">France air expo 2023</h2>
+                      <p class="underline">9:00 AM to 18:00 PM</p>
                       <p>Saint Martin de Castillon</p>
                   </div>
-                  <div class="column">
-                      <p>13 nov</p>
+                  <div class="column jsp">
+                      <p class="taille couleurp2">13 <br> nov</p>
                   </div>
               </div>
-            
-              <div class="row45">
-                <div class="column">
-                  <p>13 nov</p>
+            <br>
+              <div class="row45 w-75 mx-auto">
+                <div class="column jsp">
+                  <p class="taille couleurp">8 & 9 <br>nov</p>
               </div>
-                <div class="column">
-                    <h2>France air expo 2023</h2>
-                    <p>9:00 AM to 18:00 PM</p>
+                <div class="column jsp">
+                    <h2 class="taille">France air expo 2023</h2>
+                    <p class="underline">9:00 AM to 18:00 PM</p>
                     <p>Saint Martin de Castillon</p>
                 </div>
-                <div class="column">
-                  <img src="Ressources/gallery/event-1.png" alt="Expo 2023">
+                <div class="column jsp">
+                  <img src="Ressources/gallery/event-3.jpg" alt="Expo 2023">
               </div>
             </div>
-            
+            </container>
     </section>
 
 
@@ -268,7 +271,7 @@
                     <div class="backgroundBlue banner">Alain STRUMENT</div>
                     <div class="triangle"></div>
                 </div>
-                <div class="mt-2 text-center">Pilote ULM - Instructrice</div>
+                <div class="mt-2 text-center">Pilote ULM - Instructeur</div>
             </div>
         </div>
     </section>
@@ -282,7 +285,7 @@
     <!-- Tarifs -->
     <section id="tarifs" class="pt-5">
         <div class="pl-5"><h1 class="sectionTitle mb-2">Tarifs</h1>
-            <h2 class="sectionSubTitle pb-5"><b class="giantT">L</b> ’aéro-club assure la formation de pilotes et d’instructeurs. <br> Et propose également des tarifs accèssibles et conformes à toute personne !</h2>
+            <h2 class="sectionSubTitle pb-5"><b class="giantT">L</b> ’aéro-club assure la formation de pilotes et d’instructeurs, et propose également des tarifs accessibles et conformes à toute personne !</h2>
           <!--Container du carroussel-->
           <container id="car2">
           <div class="container d-flex m-auto justify-content-center">
@@ -290,38 +293,44 @@
             <div class="carousel-inner">
               <div class="carousel-item active w-100">
                 <div class="banner2 p-3">
-                  <div class="path m-1"><h1 class="fs-3 p-2">Bannière Bootstrap</h1></div>
+                  <div class="path m-1"><h1 class="fs-3 p-2">Stage d'initiation</h1></div>
                   <ul class="mt-3">
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
+                    <li>Durée de 3 heures</li>
+                    <li>Présentation de l'aeronef et notion de mécanique du vol</li>
+                    <li>Gonflage et pilotage d'un parapente au sol</li>
+                    <li>Comprend un vol de 20 minutes en biplace</li>
+                    <li>Initiation au pilotage en vol</li>
                   </ul>
                   <div class="path2 float-right"><p class="mt-4 fs-6 text-right mr-3">180 €</p></div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="banner2 p-3">
-                  <div class="path m-1"><h1 class="fs-3 p-2">Bannière Bootstrap</h1></div>
+                  <div class="path m-1"><h1 class="fs-3 p-2">Brevet de pilote</h1></div>
                   <ul>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
+                    <li>Validité d'1 an</li>
+                    <li>Cours illimités</li>
+                    <li>Formation à pied ou charriot</li>
+                    <li>Prêt du matériel</li>
+                    <li>10 vols minimum</li>
+                    <li>Cours théoriques</li>
+                    <li>Un cours de perfectionnement offert</li>
                   </ul>
-                  <div class="path2 float-right"><p class="mt-4 fs-6 text-right mr-3">180 €</p></div>
+                  <div class="path2 float-right"><p class="mt-4 fs-6 text-right mr-3">1200 €</p></div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="banner2 p-3">
-                  <div class="path m-1"><h1 class="fs-3 p-2">Bannière Bootstrap</h1></div>
+                  <div class="path m-1"><h1 class="fs-3 p-2">Emport de passagers</h1></div>
                   <ul>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
-                    <li>Laurent Ipsum</li>
+                    <li>Durée de 6 à 8 heures</li>
+                    <li>Evaluation préalable du pilote</li>
+                    <li>Formation biplace à pied ou charriot</li>
+                    <li>Avec matériel du stagiaire</li>
+                    <li>4 vols minimum</li>
+                    <li>Sensibilisation aux facteurs humains</li>
                   </ul>
-                  <div class="path2 float-right"><p class="mt-4 fs-6 text-right mr-3">180 €</p></div>
+                  <div class="path2 float-right"><p class="mt-4 fs-6 text-right mr-3">450 €</p></div>
                 </div>
               </div>
             </div>
@@ -392,30 +401,23 @@
     <section id="contact" class="backgroundDarkBlue pt-5 px-5">
         <div class="row">
             <div class="col-5 text-center textWhite pl-5">
-                <h3 class="contactTitle">Information</h3>
-                <div>acf21@gmail.com</div>
-                <div>+33 01 60 56 60 60</div>
-                <div>62, Avenue de la République, 70200 Lure</div>
-                <div class="d-flex justify-content-center mt-3">
-                    <img class="logoI fitCover" src="Ressources/Images/linkedinWhite.png" alt="">
-                    <img class="logoI fitCover" src="Ressources/Images/facebookWhite.png" alt="">
-                    <img class="logoI fitCover" src="Ressources/Images/instagramWhite.png" alt="">
-                </div>
+                <!-- ... (Vos informations de contact) ... -->
             </div>
-
+    
             <div class="col-7 text-center textWhite pr-5">
-                <h3 class="contactTitle m-0">Contacter nous !</h3>
+                <h3 class="contactTitle m-0">Contactez nous !</h3>
                 <div>Laissez votre message, nous vous contacterons dans la semaine</div>
-                    <div class="mt-4 mb-2">
-                        <input class="inputMarginR" type="text" placeholder="Nom">
-                        <input class="inputMarginL" type="text" placeholder="Prenom">
-                    </div>
-                    <input class="doubleInput my-2" type="email" placeholder="Email"><br>
-                    <textarea class="doubleInput BigInput my-2" name="" id="" cols="30" rows="10"></textarea><br>
-                    <input class="submitInput mt-3 mb-1" type="submit" value="Envoyer" onclick="startAnimation('animationVideo2')">
+                <div class="mt-4 mb-2">
+                    <input id="firstName" class="inputMarginR" type="text" placeholder="Nom">
+                    <input id="lastName" class="inputMarginL" type="text" placeholder="Prénom">
+                </div>
+                <input id="email" class="doubleInput my-2" type="email" placeholder="Email"><br>
+                <textarea id="message" class="doubleInput BigInput my-2" name="" id="" cols="30" rows="10"></textarea><br>
+                <input class="submitInput mt-3 mb-1" type="submit" value="Envoyer" onclick="submitForm()">
             </div>
         </div>
     </section>
+    
 
     
     <!-- Footer -->
@@ -431,7 +433,7 @@
     </footer>
 
 
-    <script src="Script/index.js"></script>
+    
     <script src="Script/ruben.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

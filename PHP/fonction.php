@@ -77,16 +77,62 @@
 
     function numError($num) {
         if (!is_numeric($num)){
-            return "<div class='erreur'> L'age doit être un nombre. </div><br>";
+            return "<div class='erreur'> L'âge doit être un nombre. </div><br>";
         }
         elseif ($num<0){
-            return "<div class='erreur'> Le num ne peut pas être négatif </div><br>";
+            return "<div class='erreur'> Le numéro ne peut pas être négatif </div><br>";
         }
         else{
             return false;
         }
     }
 
+    function nameError($name) {
+        if (!is_string($name))
+        {
+            return "<br><br><div class='erreur'> Le nom doit être une chaîne de caractères. </div>";
+        }
+        elseif (strlen($name)<2)
+        {
+            return "<br><br><div class='erreur'> Votre nom est trop court </div>";
+        }
+        elseif (strlen($name)>100)
+        {
+            return "<br><div class='erreur'> Votre nom est trop long </div>";
+        }
+        else
+        {
+            return false;
+        }
+    }
 
+    function firstnameError($firstname) {
+        if (!is_string($firstname)){
+            return "<br><div class='erreur'> Le prénom doit être une chaîne de caractères. </div>";
+        }
+        elseif (strlen($firstname)<2){
+            return "<br><div class='erreur'> Votre prénom est trop court </div>";
+        }
+        elseif (strlen($firstname)>100){
+            return "<br><div class='erreur'> Votre prénom est trop long </div>";
+        }
+        else{
+            return false;
+        }
+    }
+    function typeError($typeULM) {
+        if (!is_string($typeULM)){
+            return "<br><div class='erreur'> Le type doit être une chaîne de caractères. </div>";
+        }
+        elseif (strlen($typeULM)<2){
+            return "<br><div class='erreur'> Votre prénom est trop court </div>";
+        }
+        elseif (strlen($typeULM)>100){
+            return "<br><div class='erreur'> Votre prénom est trop long </div>";
+        }
+        else{
+            return false;
+        }
+    }
 
 ?>
