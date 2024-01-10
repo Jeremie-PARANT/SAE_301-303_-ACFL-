@@ -30,7 +30,7 @@ function submitForm() {
         }
     };
 
-    xhr.open('POST', 'send_contact_form.php', true);
+    xhr.open('POST', 'PHP/send_contact_form.php', true);
     xhr.send(formData);
 }
 
