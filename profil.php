@@ -62,7 +62,7 @@ if (empty($adherent)) {
         
             // Affiche les information de l'utilisateur actuel
             echo '<h1 class="sectionTitle"> Vos informations personnelles </h1>';
-        echo '<div class="infos_p mx-auto mb-5"">';
+        echo '<div class="infos_p mx-auto mb-5 rounded"">';
         foreach ($rows as $row) {
             echo "Numéro d'adhérent: " . $row['num'] . "<br>";
             echo "Nom: " . $row['name'] . ' ' . $row['surname'] . "<br>";
