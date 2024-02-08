@@ -407,17 +407,18 @@
             <div class="col-7 text-center textWhite pr-5">
                 <h3 class="contactTitle m-0">Contactez nous !</h3>
                 <div>Laissez votre message, nous vous contacterons dans la semaine</div>
-                <div class="mt-4 mb-2">
-                    <input id="firstName" class="inputMarginR" type="text" placeholder="Nom">
-                    <input id="lastName" class="inputMarginL" type="text" placeholder="Prénom">
-                </div>
-                <input id="email" class="doubleInput my-2" type="email" placeholder="Email"><br>
-                <textarea id="message" class="doubleInput BigInput my-2" name="" id="" cols="30" rows="10"></textarea><br>
-                <input class="submitInput mt-3 mb-1" type="submit" value="Envoyer" onclick="submitForm()">
+                <form id="myForm">
+                    <div class="mt-4 mb-2">
+                        <input id="firstName" class="inputMarginR" type="text" placeholder="Nom">
+                        <input id="lastName" class="inputMarginL" type="text" placeholder="Prénom">
+                    </div>
+                    <input id="email" class="doubleInput my-2" type="email" placeholder="Email"><br>
+                    <textarea id="message" class="doubleInput BigInput my-2" name="" id="" cols="30" rows="10"></textarea><br>
+                    <input class="submitInput mt-3 mb-1" type="submit" value="Envoyer">
+                </form>
             </div>
         </div>
     </section>
-    
 
     
     <!-- Footer -->
